@@ -1,10 +1,10 @@
 const exerciseContoller = require('../models/exerciseConfig')
 
 module.exports.createExercise = (req,res) => {
-    const {exerciseName, exercise, difficulty, completionTime, reps} = req.body
+    const {exerciseName, exerciseDescription, difficulty, completionTime, reps} = req.body
     exerciseContoller.create({
         exerciseName,
-        exercise,
+        exerciseDescription,
         difficulty,
         completionTime,
         reps
