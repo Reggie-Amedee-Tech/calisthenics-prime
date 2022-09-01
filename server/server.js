@@ -13,4 +13,5 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 require('./routes/exercise.routes')(app)
+require('./routes/exerciseQueue.routes')(app)
 app.listen(PORT, () => console.log('Database successfully connected!'))

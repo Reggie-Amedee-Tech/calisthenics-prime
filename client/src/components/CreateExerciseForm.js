@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 
 const CreateExerciseForm = () => {
@@ -23,8 +23,6 @@ const CreateExerciseForm = () => {
     })
     }
     
-    
-
   return (
     <div>
         <form onSubmit={onSubmitHandler}>

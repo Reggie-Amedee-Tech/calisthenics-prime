@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.Section{
+    width: 100%;
+    border: 1px solid red;
+    height: 100vh;
+}
+
+.Container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.WorkoutCard {
+    padding: 10px;
+    margin: 5px 0px;
+    border: 1px solid red;
+}
+
+.WorkoutCard h1 {
+    width: 20rem;
+    border: 1px solid blue;
+    text-align: center;
+}
+
+.WorkoutCard h3 {
+    width: 20rem;
+    border: 1px solid pink;
+    text-align: center;
+}
+
+.WorkoutCard h5 {
+    border: 1px solid green;
+    width: 20rem;
+    text-align: center;
+}
