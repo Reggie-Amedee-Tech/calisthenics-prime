@@ -3,14 +3,14 @@ import axios from 'axios'
 
 const initialState = {
     loading: false,
-    exercises: [],
+    workoutRegimens: [],
     error: ''
     
 }
 
 
-export const getWorkoutRegimens = createAsyncThunk('workout/getWorkouts', async () => {
-    const res = await axios.get('http://localhost:5003/api/allExercises')
+export const getWorkoutRegimens = createAsyncThunk('workoutRegimen/getWorkoutRegimens', async () => {
+    const res = await axios.get('http://localhost:5003/api/regimen/workoutRegimens')
     .then(res => {
         return res.data.map(exercise => exercise)
     })
@@ -20,25 +20,25 @@ export const getWorkoutRegimens = createAsyncThunk('workout/getWorkouts', async 
     return res
 })
 
-const exerciseSliceReducer = createSlice({
-    name: 'exercise',
+const workoutRegimenSliceReducer = createSlice({
+    name: 'workoutRegimen',
     initialState,
     extraReducers: builder =>  {
-        builder.addCase(getExercises.pending, state => {
+        builder.addCase(getWorkoutRegimens.pending, state => {
             state.loading = true
         })
-        builder.addCase(getExercises.fulfilled, (state, action) => {
+        builder.addCase(getWorkoutRegimens.fulfilled, (state, action) => {
             state.loading = false
-            state.exercises = action.payload
+            state.workoutRegimens = action.payload
         })
-        builder.addCase(getExercises.rejected, (state, action) => {
+        builder.addCase(getWorkoutRegimens.rejected, (state, action) => {
             state.loading = false
-            state.exercises = []
+            state.workoutRegimens = []
             state.error = action.error.message
         })
     }
     
 })
 
-export default exerciseSliceReducer.reducer
+export default workoutRegimenSliceReducer.reducer
 

@@ -1,17 +1,18 @@
 import React, {useState} from 'react'
 import axios from 'axios';
 
+
 const CreateRegimenForm = () => {
     const [workoutRegimen, setWorkoutRegimen] = useState('');
-    const [workout,setWorkout] = useState([])
+    const [workouts,setWorkouts] = useState([])
 
 
     const createWorkout = (e) => {
         e.preventDefault();
 
-        axios.post('http://localhost:5003/api/exerciseQueueCreate', {
+        axios.post('http://localhost:5003/api/regimen/exerciseQueueCreate', {
             workoutRegimen,
-            workout
+            workouts
         })
         .then(res => {
             console.log(res)
