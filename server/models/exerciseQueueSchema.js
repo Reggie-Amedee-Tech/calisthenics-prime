@@ -6,6 +6,9 @@ const exerciseQueue = new mongoose.Schema({
     },
     workouts: {
         type: Array
+    },
+    completionTime: {
+        type: Number
     }
 }, {timestamps: true})
 
