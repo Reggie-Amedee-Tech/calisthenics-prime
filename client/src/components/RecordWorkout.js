@@ -23,8 +23,6 @@ const RecordWorkout = () => {
     }
 
     const saveWorkout = () => {
-        
-
         axios.put(`http://localhost:5003/api/regimen/${id}/exerciseQueueUpdate`, {
             workouts
         })
@@ -32,9 +30,8 @@ const RecordWorkout = () => {
         .catch(err => console.log(err))
         
     }
-
-    console.log(workouts)
-
+    
+    
     const recordWorkout = e => {
         while(done === false) {
             return <div>
@@ -50,9 +47,7 @@ const RecordWorkout = () => {
                     setDone(true)
                     saveWorkout()
                 }}>Record Exercise</button>
-            </div>
-
-            
+            </div>        
         }
         return <h1>Workout Saved, check results here!</h1>
     }
@@ -60,7 +55,6 @@ const RecordWorkout = () => {
   return (
     <div>
         {recordWorkout()}
-
     </div>
   )
 }

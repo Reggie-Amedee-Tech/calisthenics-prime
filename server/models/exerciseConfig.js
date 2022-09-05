@@ -11,7 +11,7 @@ const exerciseSchema = new mongoose.Schema({
     },
     difficulty: {
         required: true,
-        type: Number
+        type: String
     },
     completionTime: {
         type: Number

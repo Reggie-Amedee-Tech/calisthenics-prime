@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.Page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Container {
+    max-width: 1200px;
+    width: 40%;
+    margin: 0 auto;
+    border: solid red 1px;
+}
+
+.Title {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.WorkoutForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.Input {
+    width: 40%;
+    padding: 15px;
+    
+    margin-left: 28px;
+    margin-top: 20px;
+}
+
+.Input2 {
+    width: 40%;
+    padding: 15px;
+    
+    margin-left: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.TextArea{
+    resize: none;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1em;
+}
+
+.Button {
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px
+}

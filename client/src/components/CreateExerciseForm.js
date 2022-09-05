@@ -1,19 +1,21 @@
+import classes from '../assets/createExercise.module.css'
 import React, { useState } from 'react'
 import axios from 'axios'
 
 const CreateExerciseForm = () => {
     const [exerciseName, setExerciseName] = useState('')
     const [exerciseDescription, setExerciseDescription] = useState('')
-    const [difficulty, setDifficulty] = useState(0)
+    const [difficulty, setDifficulty] = useState('')
 
 
     const onSubmitHandler = (e) => {
       e.preventDefault()
-      console.log(exerciseName,exerciseDescription,difficulty)
+      
       axios.post('http://localhost:5003/api/createExercise', {
         exerciseName,
-        exerciseDescription,
-        difficulty
+        difficulty,
+        exerciseDescription
+        
     })
     .then(res => {
         console.log(res.data)
@@ -21,25 +23,24 @@ const CreateExerciseForm = () => {
     .catch(err => {
         console.log(err.message)
     })
+
+    setExerciseName('')
+    setDifficulty('')
+    setExerciseDescription('')
     }
     
   return (
-    <div>
+    <div className={classes.Page}>
         <form onSubmit={onSubmitHandler}>
-            <h1>Create Workout</h1>
-            <div>
-              <label>Exercise Name</label>
-              <input type='text' value={exerciseName} onChange={(e) => setExerciseName(e.target.value)}/>
+          <div className={classes.Container}>
+            <h1 className={classes.Title}>Create Workout</h1>
+            <div className={classes.WorkoutForm}>
+              <input type='text' value={exerciseName} onChange={(e) => setExerciseName(e.target.value)} placeholder="Name Of Exercise" className={classes.Input}/>
+              <input type='text' value={difficulty} onChange={(e) => setDifficulty(e.target.value)} placeholder="Difficulty Level" className={classes.Input2}/>
+              <textarea rows={10}  type="text" value={exerciseDescription} onChange={(e) => setExerciseDescription(e.target.value)} placeholder="Description Of Exercise" className={classes.TextArea}/>
+              </div>
+            <button type="submit" className={classes.Button}>Submit</button>
             </div>
-            <div>
-              <label>Exercise Description</label>
-              <input type='text' value={exerciseDescription} onChange={(e) => setExerciseDescription(e.target.value)}/>
-            </div>
-            <div>
-              <label>Difficulty</label>
-              <input type='text' value={difficulty} onChange={(e) => setDifficulty(e.target.value)}/>
-            </div>
-            <button type="submit">Submit</button>
         </form>
         
     </div>

@@ -19,7 +19,8 @@ const GetAllWorkoutsRegimens = () => {
       {workoutRegimen.workoutRegimens.map(workout => {
         return <div>
           <p key={workout._id}>{workout.workoutRegimen}</p>
-          <Link to={`startWorkout`}>Set up workout</Link>
+          {/* <Link to={`${workout._id}/startWorkout`}>Set up workout</Link> */}
+          <Link to="#">Start Workout</Link>
         </div>
 
 
