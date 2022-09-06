@@ -4,13 +4,15 @@ import CreateRegimenForm from './components/CreateRegimenForm';
 import GetAllWorkoutsRegimens from './views/GetAllWorkoutsRegimens';
 import StartWorkoutRegimen from './components/StartWorkoutRegimen';
 import RecordWorkout from './components/RecordWorkout';
+
 import {Routes, Route} from 'react-router-dom'
 import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [time, setTime] = useState(0)
   
+
+
   return (
     <Routes>
       <Route path='' element={<CreateExerciseForm />}/>
@@ -19,6 +21,7 @@ function App() {
       <Route path="allWorkoutRegimens" element={<GetAllWorkoutsRegimens />}/>
       <Route path="allWorkoutRegimens/:id" element={<StartWorkoutRegimen />}/>
       <Route path='allWorkoutRegimens/:id/startWorkout' element={<RecordWorkout />}/>
+      
       </Routes>
     
   );

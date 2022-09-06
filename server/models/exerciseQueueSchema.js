@@ -8,7 +8,7 @@ const exerciseQueue = new mongoose.Schema({
         type: Array
     },
     completionTime: {
-        type: Number
+        type: String
     }
 }, {timestamps: true})
 

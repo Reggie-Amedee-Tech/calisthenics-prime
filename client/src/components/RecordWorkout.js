@@ -1,5 +1,6 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import InititateWorkoutPage from './InititateWorkoutPage'
 import { useLocation } from 'react-router-dom'
 
 const RecordWorkout = () => {
@@ -7,10 +8,13 @@ const RecordWorkout = () => {
     const [reps, setReps] = useState(0)
     const [done, setDone] = useState(false)
     const [workouts, setWorkouts] = useState([])
+    
+    const [initiateWorkout, setInititateWorkout] = useState(false)
 
     const location = useLocation()
-
     const id = location.pathname.slice(20,44)
+
+    
 
     const addWorkout = object => {
         setWorkouts([
@@ -54,7 +58,7 @@ const RecordWorkout = () => {
 
   return (
     <div>
-        {recordWorkout()}
+        {initiateWorkout === false ? <InititateWorkoutPage id={id}/> : recordWorkout()}
     </div>
   )
 }
