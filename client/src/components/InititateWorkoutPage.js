@@ -11,7 +11,7 @@ const InititateWorkoutPage = (props) => {
 
     useEffect(() => {
         let interval = null;
-        console.log('TESTING')
+        
 
         if (timeOn) {
             interval = setInterval(() => {
@@ -26,10 +26,7 @@ const InititateWorkoutPage = (props) => {
 
     }, [timeOn])
 
-    useEffect(() => {
-        console.log('Time is now', completionTime)
-
-    }, [completionTime])
+    
     
 
     const formatTime = () => {
@@ -39,16 +36,24 @@ const InititateWorkoutPage = (props) => {
         return `${hours}:${minutes}:${seconds}`
     }
 
-
+    useEffect(() => {
+        console.log('Time is now', completionTime)
+        
+    }, [completionTime])
     
 
-    const recordTime = () => {
+    const saveTime = () => {
         setCompletionTime(formatTime())
+    }
+
+    const recordTime = () => {
+        
         axios.put(`http://localhost:5003/api/regimen/${id}/exerciseQueueUpdate`, {
             completionTime
         })
         .then(res => console.log(res))
         .catch(err => console.log(err))
+        
     }
 
   return (
@@ -71,7 +76,11 @@ const InititateWorkoutPage = (props) => {
             setTimeOn(false)
         }}>Reset</button>
         <button onClick={() => {
+            saveTime()
+        }}>Save Time</button>
+        <button onClick={() => {
             recordTime()
+            setInitiateWorkout(true)
         }}>Finish</button>
         </div>
     </div>
