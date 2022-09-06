@@ -11,7 +11,7 @@ const InititateWorkoutPage = (props) => {
 
     useEffect(() => {
         let interval = null;
-        
+        console.log('TESTING')
 
         if (timeOn) {
             interval = setInterval(() => {
