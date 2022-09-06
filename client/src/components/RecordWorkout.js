@@ -8,9 +8,7 @@ const RecordWorkout = () => {
     const [reps, setReps] = useState(0)
     const [done, setDone] = useState(false)
     const [workouts, setWorkouts] = useState([])
-    
-    const [initiateWorkout, setInititateWorkout] = useState(false)
-
+    const [initiateWorkout, setInitiateWorkout] = useState(false)
     const location = useLocation()
     const id = location.pathname.slice(20,44)
 
@@ -36,6 +34,7 @@ const RecordWorkout = () => {
     }
     
     
+    
     const recordWorkout = e => {
         while(done === false) {
             return <div>
@@ -58,7 +57,7 @@ const RecordWorkout = () => {
 
   return (
     <div>
-        {initiateWorkout === false ? <InititateWorkoutPage id={id}/> : recordWorkout()}
+        {initiateWorkout === false ? <InititateWorkoutPage id={id} setInitiateWorkout={setInitiateWorkout}/> : recordWorkout()}
     </div>
   )
 }

@@ -1,48 +1,60 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
+import {useNavigate} from 'react'
 
 const InititateWorkoutPage = (props) => {
     const [time, setTime] = useState(0)
-    const [formatedTime, setFormatedTime] = useState('')
     const [timeOn, setTimeOn] = useState(false)
-    const [completionTime, setCompletionTime] = useState('')
-    const {id} = props;
+    const [completionTime, setCompletionTime] = useState('00:00:00')
+    const {id, setInitiateWorkout} = props;
 
 
     useEffect(() => {
         let interval = null;
+        
 
         if (timeOn) {
             interval = setInterval(() => {
                 setTime(prevTime => prevTime + 10)
             }, 10)
         } else {
+            
             clearInterval(interval)
         }
 
         return () => clearInterval(interval)
 
     }, [timeOn])
+
+    useEffect(() => {
+        console.log('Time is now', completionTime)
+
+    }, [completionTime])
     
 
     const formatTime = () => {
-        
         const hours = ("0" + Math.floor((time / 60000) % 100)).slice(-2)
         const minutes = ("0" + Math.floor((time / 1000) % 60)).slice(-2)
         const seconds = ("0" + Math.floor((time / 10) % 100)).slice(-2)
-
-        
         return `${hours}:${minutes}:${seconds}`
+    }
+
+
+    
+
+    const recordTime = () => {
+        setCompletionTime(formatTime())
+        axios.put(`http://localhost:5003/api/regimen/${id}/exerciseQueueUpdate`, {
+            completionTime
+        })
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
     }
 
   return (
     <div>
         <div>
-            {/* <span>{("0" + Math.floor((time / 60000) % 100)).slice(-2)}:</span>
-            <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
-            <span>{("0" + ((time / 10) % 100)).slice(-2)}</span> */}
             {formatTime()}
-            
         </div>
         <div>
         <button onClick={() => {
@@ -56,12 +68,10 @@ const InititateWorkoutPage = (props) => {
         }}>Resume</button>
         <button onClick={() => {
             setTime(0)
+            setTimeOn(false)
         }}>Reset</button>
         <button onClick={() => {
-            setFormatedTime((prevTime) => {
-                return prevTime = formatTime()
-            })
-            console.log(formatedTime)
+            recordTime()
         }}>Finish</button>
         </div>
     </div>
