@@ -12,7 +12,6 @@ const InititateWorkoutPage = (props) => {
     useEffect(() => {
         let interval = null;
         
-
         if (timeOn) {
             interval = setInterval(() => {
                 setTime(prevTime => prevTime + 10)

@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import axios from 'axios';
+import classes from '../assets/createWorkoutRegimen.module.css'
 
 
 const CreateRegimenForm = () => {
     const [workoutRegimen, setWorkoutRegimen] = useState('');
-    const [workouts,setWorkouts] = useState([])
-
+    const [workouts, setWorkouts] = useState([])
 
     const createWorkout = (e) => {
         e.preventDefault();
@@ -14,23 +14,38 @@ const CreateRegimenForm = () => {
             workoutRegimen,
             workouts
         })
-        .then(res => {
-            console.log(res)
-        })
-        .catch(err => {
-            console.log(err)
-        })
+            .then(res => {
+                console.log(res)
+            })
+            .catch(err => {
+                console.log(err)
+            })
     }
 
-  return (
-    <div>
-        <form onSubmit={createWorkout}>
-        <h1>Create Workout Regimen</h1>
-        <input type="text" placeholder='Create Workout Regimen' onChange={(e) => setWorkoutRegimen(e.target.value)}/>
-        <button type="submit">Submit</button>
-        </form>
-    </div>
-  )
+    return (
+        <div className={classes.Div}>
+            <form onSubmit={createWorkout}>
+                <div className={classes.Container}>
+                    <div className={classes.RegimenCard}>
+                        <div className={classes.Left}>
+                            <div className={classes.LeftContainer}>
+                            <h3 className={classes.LeftH3}>App Name</h3>
+                            <p className={classes.LeftP}>"Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                            </div>
+                        </div>
+                        <div className={classes.Right}>
+                            <div className={classes.RightContainer}>
+                            <h3 className={classes.RightH3}>Create Workout Regimen</h3>
+                            <input type="text" placeholder='Input Here' onChange={(e) => setWorkoutRegimen(e.target.value)} className={classes.RightInput}/>
+                            <button type="submit" className={classes.RightButton}>Create</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    )
 }
 
 export default CreateRegimenForm

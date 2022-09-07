@@ -13,7 +13,6 @@ const StartWorkoutRegimen = () => {
     useEffect(() => {
         axios.get(`http://localhost:5003/api/regimen/workoutRegimens/${id}`)
             .then(res => {
-                
                 setDetailedWorkout([res.data])
             })
             .catch(err => {
@@ -24,18 +23,12 @@ const StartWorkoutRegimen = () => {
 
     return (
         <div>
-            {/* {detailedWorkout.map(dworkout => {
+            {detailedWorkout.map(dworkout => {
                 return <div key={dworkout._id}>
                     <h1>{dworkout.workoutRegimen}</h1>
                     <Link to='startWorkout'>Start Workout</Link>
                 </div>
-                
-            })} */}
-
-            <div>
-                <InititateWorkoutPage />
-            </div>
-
+            })}
         </div>
     )
 }
