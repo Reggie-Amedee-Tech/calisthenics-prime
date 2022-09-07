@@ -1,12 +1,17 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-import {useNavigate} from 'react'
+import { useLocation } from 'react-router-dom'
+
 
 const InititateWorkoutPage = (props) => {
     const [time, setTime] = useState(0)
     const [timeOn, setTimeOn] = useState(false)
     const [completionTime, setCompletionTime] = useState('00:00:00')
-    const {id, setInitiateWorkout} = props;
+    const {setInitiateWorkout} = props;
+
+    const location = useLocation()
+    const id = location.pathname.slice(15)
+    
 
 
     useEffect(() => {
@@ -36,7 +41,7 @@ const InititateWorkoutPage = (props) => {
     }
 
     useEffect(() => {
-        console.log('Time is now', completionTime)
+        
         
     }, [completionTime])
     

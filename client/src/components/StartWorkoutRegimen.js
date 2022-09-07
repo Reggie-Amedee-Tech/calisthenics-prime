@@ -13,6 +13,7 @@ const StartWorkoutRegimen = () => {
     useEffect(() => {
         axios.get(`http://localhost:5003/api/regimen/workoutRegimens/${id}`)
             .then(res => {
+                
                 setDetailedWorkout([res.data])
             })
             .catch(err => {
