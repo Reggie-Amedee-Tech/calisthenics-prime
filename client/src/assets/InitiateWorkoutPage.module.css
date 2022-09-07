@@ -1,0 +1,86 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.Div {
+    width: 100vw;
+    height: 100vh;
+    background-color: #CFF0FF;
+}
+
+.Container {
+    max-width: 1200px;
+    width: 90%;
+    height: 100vh;
+    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #B3E5FD;
+}
+
+.StopClockContainer {
+    width: 60%;
+    height: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #6B9AB0;;
+}
+
+.H1 {
+    font-size: 9rem;
+
+}
+
+.NumbersDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.ButtonDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Start {
+    padding: 7px;
+    font-size: 2rem;
+    background-color: #B3E5FD;
+}
+
+.Stop {
+    padding: 7px;
+    font-size: 2rem;
+    background-color: #B3E5FD;
+}
+
+.Resume {
+    padding: 7px;
+    font-size: 2rem;
+    background-color: #B3E5FD;
+}
+
+.Reset {
+    padding: 7px;
+    font-size: 2rem;
+    background-color: #B3E5FD;
+}
+
+.SaveTime {
+    padding: 7px;
+    font-size: 2rem;
+    background-color: #B3E5FD;
+}
+
+.Finish {
+    padding: 7px;
+    font-size: 2rem;
+    background-color: #B3E5FD;
+}

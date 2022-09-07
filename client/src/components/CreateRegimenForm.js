@@ -19,7 +19,7 @@ const CreateRegimenForm = () => {
 
     
 
-    console.log( id)
+    console.log(id)
 
     const createWorkout = (e) => {
         e.preventDefault();
