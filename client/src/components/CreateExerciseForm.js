@@ -30,6 +30,7 @@ const CreateExerciseForm = () => {
     }
 
     console.log('HAYYY')
+    console.log('FORCES')
     
   return (
     <div className={classes.Page}>
