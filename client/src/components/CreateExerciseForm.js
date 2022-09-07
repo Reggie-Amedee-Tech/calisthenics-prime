@@ -28,6 +28,8 @@ const CreateExerciseForm = () => {
     setDifficulty('')
     setExerciseDescription('')
     }
+
+    console.log('HAYYY')
     
   return (
     <div className={classes.Page}>
