@@ -33,6 +33,7 @@ const RecordWorkout = () => {
             .catch(err => console.log(err))
     }
 
+    console.log('YO')
 
 
     const recordWorkout = e => {
