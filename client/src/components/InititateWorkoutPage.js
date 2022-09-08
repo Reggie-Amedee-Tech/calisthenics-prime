@@ -9,11 +9,12 @@ const InititateWorkoutPage = (props) => {
     const [timeOn, setTimeOn] = useState(false)
     const [completionTime, setCompletionTime] = useState('00:00:00')
     const { setInitiateWorkout } = props;
+    const [fin,setFin] = useState(false)
+    const [pressStart, setPressStart] = useState(false)
+    const [timeSaved, setTimeSaved] = useState(false)
 
     const location = useLocation()
     const id = location.pathname.slice(15)
-
-
 
     useEffect(() => {
         let interval = null;
@@ -31,9 +32,6 @@ const InititateWorkoutPage = (props) => {
 
     }, [timeOn])
 
-
-
-
     const formatTime = () => {
         const hours = ("0" + Math.floor((time / 60000) % 100)).slice(-2)
         const minutes = ("0" + Math.floor((time / 1000) % 60)).slice(-2)
@@ -42,8 +40,6 @@ const InititateWorkoutPage = (props) => {
     }
 
     useEffect(() => {
-
-
     }, [completionTime])
 
 
@@ -52,7 +48,6 @@ const InititateWorkoutPage = (props) => {
     }
 
     const recordTime = () => {
-
         axios.put(`http://localhost:5003/api/regimen/${id}/exerciseQueueUpdate`, {
             completionTime
         })
@@ -60,6 +55,7 @@ const InititateWorkoutPage = (props) => {
             .catch(err => console.log(err))
 
     }
+
 
     return (
         <div className={classes.Div}>
@@ -69,23 +65,47 @@ const InititateWorkoutPage = (props) => {
                         <h1 className={classes.H1}>{formatTime()}</h1>
                     </div>
                     <div className={classes.ButtonDiv}>
-                        <button className={classes.Start} onClick={() => {
+                        <button className={classes.Start} disabled={pressStart} onClick={(e) => {
+                            if (timeSaved === true) {
+                                e.currentTarget.disabled = true
+                            }
+                            e.currentTarget.disabled = true
+                            setPressStart(true)
                             setTimeOn(true)
                         }}>Start</button>
-                        <button className={classes.Stop} onClick={() => {
+                        <button className={classes.Stop} disabled={timeSaved} onClick={(e) => {
+                            if (timeSaved === true) {
+                                e.currentTarget.disabled = true
+                            }
+                            setFin(true)
                             setTimeOn(false)
                         }}>Stop</button>
-                        <button className={classes.Resume} onClick={() => {
+                        <button className={classes.Resume} disabled={timeSaved} onClick={(e) => {
+                            if (timeSaved === true) {
+                                e.currentTarget.disabled = true
+                            }
+                            
+                            setFin(false)
                             setTimeOn(true)
                         }}>Resume</button>
-                        <button className={classes.Reset} onClick={() => {
+                        <button className={classes.Reset} disabled={timeSaved}  onClick={(e) => {
+                            if (timeSaved === true) {
+                                e.currentTarget.disabled = true
+                            }
+                            setPressStart(false)
+                            setFin(false)
                             setTime(0)
                             setTimeOn(false)
                         }}>Reset</button>
-                        <button className={classes.SaveTime} onClick={() => {
+                        <button className={classes.SaveTime} disabled={!fin} onClick={(e) => {
+                            e.currentTarget.disabled = true
+                            setPressStart(true)
+                            setFin(true)
+                            setTimeSaved(true)
                             saveTime()
                         }}>Save Time</button>
-                        <button className={classes.Finish} onClick={() => {
+                        <button className={classes.Finish} disabled={!timeSaved} onClick={(e) => {
+                            e.currentTarget.disabled = true
                             recordTime()
                             setInitiateWorkout(true)
                         }}>Finish</button>

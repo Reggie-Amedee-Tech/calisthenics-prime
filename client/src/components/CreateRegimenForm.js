@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import classes from '../assets/createWorkoutRegimen.module.css'
-import { generatePath, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const CreateRegimenForm = () => {
@@ -16,10 +16,6 @@ const CreateRegimenForm = () => {
     })
 
     id = id[0]
-
-    
-
-    console.log(id)
 
     const createWorkout = (e) => {
         e.preventDefault();
@@ -40,7 +36,6 @@ const CreateRegimenForm = () => {
 
             
     }
-
     useEffect(() => {
         if (id === undefined) {
             return
@@ -48,10 +43,6 @@ const CreateRegimenForm = () => {
             navigate(`${id}`)
         }
     }, [workout])
-
-
-
-
 
     return (
         <div className={classes.Div}>
