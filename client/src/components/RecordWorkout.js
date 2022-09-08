@@ -34,6 +34,7 @@ const RecordWorkout = () => {
     }
 
     console.log('YO')
+    console.log('YOOOOOO')
 
 
     const recordWorkout = e => {
