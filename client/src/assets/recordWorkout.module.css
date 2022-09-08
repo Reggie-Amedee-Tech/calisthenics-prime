@@ -1,0 +1,148 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.Div {
+    width: 100%;
+    background-color: #CFF0FF;
+}
+
+.Container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.RecordWorkoutCard {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+}
+
+.Left {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #B3E5FD;
+    
+}
+
+.LeftContainer {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.LeftH3 {
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    bottom: 3px;
+    
+}
+
+.LeftP {
+    width: 30rem;
+    font-size: 0.9em;
+    margin: 0 auto;
+    line-height: 20px;
+    position: relative;
+    bottom: 35px;
+    
+}
+
+.Right {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #6B9AB0;
+}
+
+.RightContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70%;
+}
+
+.RightTop {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    padding: 20px;
+    width: 70%;
+    align-content: center;
+    
+    margin: 0 auto;
+}
+
+.RightTopInputs {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.RightTopButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto 0;
+}
+
+.RightH3 {
+    font-size: 3rem;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.RightInput {
+    width: 15vw;
+    padding: 5px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.RightInput2 {
+    width: 5vw;
+    padding: 5px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.RightButton {
+    width: 8vw;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #B3E5FD;
+    border-radius: 7.5%;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.RightButton2 {
+    width: 8vw;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgb(57, 134, 77);
+    border-radius: 7.5%;
+    border: 1px solid whitesmoke;
+    font-size: 1.1rem;
+}
+
+.RightButton:hover {
+    background-color: #FCDBB3;
+}
+
+.RightButton2:hover {
+    background-color: #318e17;
+}
