@@ -1,18 +1,19 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import classes from '../assets/detailedWorkoutPage.module.css'
 import { useLocation } from 'react-router-dom'
 
 const DetailedRegimenPage = () => {
     const location = useLocation()
-
+    const [workout, setWorkout] = useState([])
     const id = location.pathname.slice(20)
-    console.log(id)
-
+    
+    
 
     useEffect(() => {
         axios.get(`http://localhost:5003/api/regimen/workoutRegimens/${id}`)
             .then(res => {
+                setWorkout([res.data])
                 console.log(res)
             })
             .catch(err => {
@@ -32,6 +33,12 @@ const DetailedRegimenPage = () => {
                         </div>
                     </div>
                     <div className={classes.Right}>
+                        {workout.map(werk => {
+                            return <div className={classes.RightContainer}>
+                                <h1>{werk.workoutRegimen}</h1>
+                                <h2>HELLO</h2>
+                            </div>
+                        })}
 
                     </div>
 
