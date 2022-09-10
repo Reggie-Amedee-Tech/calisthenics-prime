@@ -19,22 +19,17 @@ const CreateRegimenForm = () => {
 
     const createWorkout = (e) => {
         e.preventDefault();
-
         axios.post('http://localhost:5003/api/regimen/exerciseQueueCreate', {
             workoutRegimen,
             workouts
         })
             .then(res => {
                 setWorkout([res.data])
-                console.log(res)
-                
-                
+                console.log(res)    
             })
             .catch(err => {
                 console.log(err)
-            })
-
-            
+            })      
     }
     useEffect(() => {
         if (id === undefined) {

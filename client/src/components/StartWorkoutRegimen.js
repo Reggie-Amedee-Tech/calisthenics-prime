@@ -20,8 +20,7 @@ const StartWorkoutRegimen = () => {
                 console.log(err)
             })
     }, [])
-
-
+    
     return (
         <div>
             {detailedWorkout.map(dworkout => {

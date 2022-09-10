@@ -33,10 +33,6 @@ const RecordWorkout = () => {
             .catch(err => console.log(err))
     }
 
-    console.log('YO')
-    console.log('YOOOOOO')
-
-
     const recordWorkout = e => {
         while (done === false) {
             return <div className={classes.Div}>
@@ -52,17 +48,11 @@ const RecordWorkout = () => {
                         <div className={classes.Right}>
                             <div className={classes.RightContainer}>
                                 <div className={classes.RightTop}>
-
                                 <div className={classes.RightTopInputs}>
-
-                                
                                 <input type='text' onChange={e => setWorkoutName(e.target.value)} value={workoutName} className={classes.RightInput}/>
                                 <input type="number" onChange={e => setReps(e.target.value)} className={classes.RightInput2} value={reps}/>
-                                
                                 </div>
                                 <div className={classes.RightTopButton}>
-
-                                
                                 <button onClick={() => {
                                     addWorkout({
                                         workoutName: workoutName,
