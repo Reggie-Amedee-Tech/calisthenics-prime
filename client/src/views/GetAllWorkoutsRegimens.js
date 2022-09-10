@@ -28,7 +28,7 @@ const GetAllWorkoutsRegimens = () => {
             <p>{workout.workoutRegimen}</p>
             <p>{workout.createdAt}</p>
             </div>
-            <Link to={`#`} className={classes.Link}>Start Workout</Link>
+            <Link to={`${workout._id}`} className={classes.Link}>View Workout</Link>
           </div>
 
         })}

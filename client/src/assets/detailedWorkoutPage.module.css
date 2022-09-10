@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.Div {
+    width: 100%;
+    background-color: #CFF0FF;
+}
+
+.Container {
+    width: 90%;
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.DetailedWorkoutCard {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+}
+
+.Left {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #B3E5FD;
+}
+
+.LeftContainer {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.LeftH3 {
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    bottom: 3px;
+    
+}
+
+.LeftP {
+    width: 30rem;
+    font-size: 0.9em;
+    margin: 0 auto;
+    line-height: 20px;
+    position: relative;
+    bottom: 35px;
+}
+
+.Right {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #6B9AB0;
+}
