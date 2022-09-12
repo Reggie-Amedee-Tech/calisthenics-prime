@@ -6,13 +6,13 @@
 .Div {
     height: 100vh;
     width: 100%;
-    border: 1px solid red;
+    
 }
 
 .Container {
     max-width: 1200px;
     width: 90%;
-    border: 1px dotted blue;
+    
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -30,7 +30,7 @@
 }
 
 .WorkoutCard {
-    border: 1px solid pink;
+    border: 1px solid black;
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -49,4 +49,12 @@
 .Link {
     padding: 10px;
     margin: 0 auto;
+    margin-bottom: 10px;
+    color: black;
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+.Link:hover {
+    background-color: rgb(133, 133, 133);
 }

@@ -3,73 +3,47 @@
     padding: 0px;
 }
 
+.Table {
+    display: flex;
+    flex-direction: column;
+}
+
 .Div {
     width: 100%;
-    background-color: #CFF0FF;
 }
 
 .Container {
-    width: 90%;
     max-width: 1200px;
-    height: 100vh;
+    width: 90%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
-.DetailedWorkoutCard {
+.TableRow {
+    background-color: green;
     display: flex;
     flex-direction: row;
-    height: 80%;
-}
-
-.Left {
-    height: 100%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #B3E5FD;
-}
-
-.LeftContainer {
-    height: 70%;
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
+    border: 1px solid black;
 }
 
-.LeftH3 {
-    font-size: 3rem;
+
+.TableHead {
+    padding: 10px;
+    font-size: 2.1rem;
+    color: white;
+}
+
+.TableBottomRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid black;
+}
+
+.TableData {
+    flex: 1;
     text-align: center;
-    position: relative;
-    bottom: 3px;
-}
-
-.LeftP {
-    width: 30rem;
-    font-size: 0.9em;
-    margin: 0 auto;
-    line-height: 20px;
-    position: relative;
-    bottom: 35px;
-}
-
-.Right {
-    height: 100%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #6B9AB0;
-    border: 1px dotted red;
-}
-
-.RightContainer {
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 0 auto;
+    margin-left: 70px;
+    font-size: 2.1rem;
+    padding: 20px;
 }
