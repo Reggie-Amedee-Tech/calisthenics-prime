@@ -31,6 +31,7 @@ const CreateRegimenForm = () => {
                 console.log(err)
             })      
     }
+    
     useEffect(() => {
         if (id === undefined) {
             return

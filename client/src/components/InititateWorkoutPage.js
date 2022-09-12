@@ -12,24 +12,19 @@ const InititateWorkoutPage = (props) => {
     const [fin,setFin] = useState(false)
     const [pressStart, setPressStart] = useState(false)
     const [timeSaved, setTimeSaved] = useState(false)
-
     const location = useLocation()
     const id = location.pathname.slice(15)
 
     useEffect(() => {
         let interval = null;
-
         if (timeOn) {
             interval = setInterval(() => {
                 setTime(prevTime => prevTime + 10)
             }, 10)
         } else {
-
             clearInterval(interval)
         }
-
         return () => clearInterval(interval)
-
     }, [timeOn])
 
     const formatTime = () => {
@@ -53,7 +48,6 @@ const InititateWorkoutPage = (props) => {
         })
             .then(res => console.log(res))
             .catch(err => console.log(err))
-
     }
 
 
