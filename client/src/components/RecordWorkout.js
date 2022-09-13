@@ -1,8 +1,9 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import InititateWorkoutPage from './InititateWorkoutPage'
 import classes from '../assets/recordWorkout.module.css'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+
 
 const RecordWorkout = () => {
     const [workoutName, setWorkoutName] = useState('')
@@ -11,7 +12,8 @@ const RecordWorkout = () => {
     const [workouts, setWorkouts] = useState([])
     const [initiateWorkout, setInitiateWorkout] = useState(false)
     const location = useLocation()
-    const id = location.pathname.slice(15)
+    const id = location.pathname.slice(1)
+    const navigate = useNavigate()
 
     console.log(id)
 
@@ -64,6 +66,7 @@ const RecordWorkout = () => {
                                 <button onClick={() => {
                                     setDone(true)
                                     saveWorkout()
+                                    navigate('/allWorkoutRegimens')
                                 }} className={classes.RightButton2}>Record Exercise</button>
                             </div>
                         </div>

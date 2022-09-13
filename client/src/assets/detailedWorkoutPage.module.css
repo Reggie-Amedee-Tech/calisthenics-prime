@@ -29,7 +29,7 @@
 
 .TableHead {
     padding: 10px;
-    font-size: 2.1rem;
+    font-size: 1rem;
     color: white;
 }
 
@@ -43,7 +43,7 @@
 .TableData {
     flex: 1;
     text-align: center;
-    margin-left: 70px;
-    font-size: 2.1rem;
-    padding: 20px;
+    margin-left: 80px;
+    font-size: 1rem;
+    padding: 10px;
 }

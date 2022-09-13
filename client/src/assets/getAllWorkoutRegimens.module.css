@@ -6,6 +6,8 @@
 .Table {
     display: flex;
     flex-direction: column;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .Div {
@@ -51,6 +53,7 @@
     font-size: 1rem;
     padding: 10px;
 }
+
 
 .Link {
     padding: 5px;

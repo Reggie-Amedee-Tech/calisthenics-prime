@@ -13,7 +13,8 @@ const InititateWorkoutPage = (props) => {
     const [pressStart, setPressStart] = useState(false)
     const [timeSaved, setTimeSaved] = useState(false)
     const location = useLocation()
-    const id = location.pathname.slice(15)
+    const id = location.pathname.slice(1)
+    console.log(id)
 
     useEffect(() => {
         let interval = null;
