@@ -12,6 +12,8 @@
 
 .Div {
     width: 100%;
+    background-color: #E08848;
+    min-height: 100vh;
 }
 
 .Container {
@@ -21,7 +23,7 @@
 }
 
 .TableRow {
-    background-color: green;
+    background-color: #945121;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -44,6 +46,7 @@
     align-items: center;
     border: 1px solid black;
     width: 100%;
+    background-color: whitesmoke;
 }
 
 .TableData {
