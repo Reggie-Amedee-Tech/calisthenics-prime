@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import InititateWorkoutPage from './InititateWorkoutPage'
 import { Link, useLocation } from 'react-router-dom'
 import axios from 'axios'
 
