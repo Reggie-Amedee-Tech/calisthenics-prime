@@ -39,24 +39,25 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 10px;
 }
 
 .LeftH3 {
-    font-size: 3rem;
+    font-size: 3vw;
+    width: 100%;
     text-align: center;
     position: relative;
     bottom: 3px;
-    
 }
 
 .LeftP {
-    width: 30rem;
-    font-size: 0.9em;
+    width: 100%;
+    font-size: 1vw;
     margin: 0 auto;
-    line-height: 20px;
+    line-height: 30px;
     position: relative;
     bottom: 35px;
-    
+    padding: 5px;
 }
 
 .Right {
@@ -76,7 +77,8 @@
 }
 
 .RightH3 {
-    font-size: 3rem;
+    font-size: 3vw;
+    width: 100%;
     text-align: center;
     color: whitesmoke;
 }
@@ -86,6 +88,7 @@
     padding: 5px;
     margin: 0 auto;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .RightButton {
@@ -100,4 +103,43 @@
 
 .RightButton:hover {
     background-color: #48D3E0;
+}
+
+@media screen and (max-width: 1330px) {
+
+    .LeftContainer {
+        height: 60%;
+    }
+
+    .RightContainer {
+        height: 60%;
+    }
+}
+
+@media screen and (max-width: 906px) {
+    .RightButton {
+        font-size: 1vw;
+    }
+
+    .RightInput {
+        font-size: 1vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .RegimenCard {
+        flex-direction: column;
+        height: 90%;
+    }
+
+    .LeftContainer {
+        height: 80%;
+    }
+
+    .RightContainer {
+        height: 80%;
+    }
+    
+
+
 }
