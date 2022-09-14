@@ -13,7 +13,6 @@
     max-width: 1200px;
     width: 90%;
     height: 100vh;
-    
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -28,59 +27,105 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     padding: 20px;
     background-color: #945121;
 }
 
 .H1 {
-    font-size: 9rem;
-
-}
-
-.NumbersDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    font-size: 11vw;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .ButtonDiv {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    width: 100%;
 }
 
 .Start {
     padding: 7px;
-    font-size: 2rem;
-    background-color: #128994
+    font-size: 1.5vw;
+    background-color: #128994;
+    border-radius: 50%;
+    width: 7vw;
+    border: solid black 1px;
 }
 
 .Stop {
     padding: 7px;
-    font-size: 2rem;
-    background-color: #128994
+    font-size: 1.5vw;
+    width: 7vw;
+    background-color: #128994;
+    border-radius: 50%;
+    border: solid black 1px;
 }
 
 .Resume {
     padding: 7px;
-    font-size: 2rem;
-    background-color: #128994
+    font-size: 1.5vw;
+    width: 7vw;
+    background-color: #128994;
+    border-radius: 50%;
+    border: solid black 1px;
 }
 
 .Reset {
     padding: 7px;
-    font-size: 2rem;
-    background-color: #128994
+    font-size: 1.5vw;
+    width: 7vw;
+    background-color: #128994;
+    border-radius: 50%;
+    border: solid black 1px;
 }
 
 .SaveTime {
     padding: 7px;
-    font-size: 2rem;
-    background-color: #128994
+    font-size: 1.5vw;
+    width: 7vw;
+    background-color: #128994;
+    border-radius: 50%;
+    border: solid black 1px;
 }
 
 .Finish {
     padding: 7px;
-    font-size: 2rem;
-    background-color: #128994
+    font-size: 1.5vw;
+    width: 7vw;
+    background-color: #128994;
+    border-radius: 50%;
+    border: solid black 1px;
 }
+
+@media screen and (max-width: 650px) {
+    .StopClockContainer {
+        height: 60%;
+    }
+
+    .Resume {
+        padding: 2px;
+    }
+
+    .Start {
+        padding: 2px;
+    }
+
+    .Stop {
+        padding: 2px;
+    }
+
+    .SaveTime {
+        padding: 2px;
+    }
+
+    .Finish {
+        padding: 2px;
+    }
+
+    .Reset {
+        padding: 2px; 
+    }
+}
+
