@@ -42,9 +42,8 @@ const RecordWorkout = () => {
                     <div className={classes.RecordWorkoutCard}>
                         <div className={classes.Left}>
                             <div className={classes.LeftContainer}>
-                                <h3 className={classes.LeftH3}>App Name</h3>
-                                <p className={classes.LeftP}>"Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                            <h3 className={classes.LeftH3}><span>&copy;</span>Strength-Track</h3>
+                                <p className={classes.LeftP}>Please log the workout name and the amount of reps that were performed! Once executed, please select add exercise and the form will reset to its initial state, which means your current workout was saved. You are able to add multiple exercises. Once you are done, please select "Record Exercise" to see the results on your dashboard.</p>
                             </div>
                         </div>
                         <div className={classes.Right}>

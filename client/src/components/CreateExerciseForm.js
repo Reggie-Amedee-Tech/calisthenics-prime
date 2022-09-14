@@ -7,7 +7,6 @@ const CreateExerciseForm = () => {
     const [exerciseDescription, setExerciseDescription] = useState('')
     const [difficulty, setDifficulty] = useState('')
 
-
     const onSubmitHandler = (e) => {
       e.preventDefault()
       

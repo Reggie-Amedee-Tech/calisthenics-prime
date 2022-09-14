@@ -40,6 +40,8 @@ const CreateRegimenForm = () => {
         }
     }, [workout])
 
+    
+
     return (
         <div className={classes.Div}>
             <form onSubmit={createWorkout}>
@@ -47,9 +49,8 @@ const CreateRegimenForm = () => {
                     <div className={classes.RegimenCard}>
                         <div className={classes.Left}>
                             <div className={classes.LeftContainer}>
-                                <h3 className={classes.LeftH3}>App Name</h3>
-                                <p className={classes.LeftP}>"Lorem ipsum dolor sit amet,
-                                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                                <h3 className={classes.LeftH3}><span>&copy;</span>Strength-Track</h3>
+                                <p className={classes.LeftP}><span>&copy;</span>Strength-Track is an application that allows you to log your overall strength training process. Please create a workout regimen. Once created, you will be brought to the workout initiate page which will allow you to start your current exercise! After you save your workout, you will be able to log it and see the results in the following page!</p>
                             </div>
                         </div>
                         <div className={classes.Right}>
