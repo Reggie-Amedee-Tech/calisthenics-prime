@@ -39,24 +39,25 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 10px;
 }
 
 .LeftH3 {
-    font-size: 3rem;
+    font-size: 3vw;
+    width: 100%;
     text-align: center;
     position: relative;
     bottom: 3px;
-    
 }
 
 .LeftP {
-    width: 30rem;
-    font-size: 0.9em;
+    width: 100%;
+    font-size: 1vw;
     margin: 0 auto;
-    line-height: 20px;
+    line-height: 30px;
     position: relative;
     bottom: 35px;
-    
+    padding: 5px;
 }
 
 .Right {
@@ -82,7 +83,6 @@
     padding: 20px;
     width: 70%;
     align-content: center;
-    
     margin: 0 auto;
 }
 
@@ -98,24 +98,19 @@
     margin: auto 0;
 }
 
-.RightH3 {
-    font-size: 3rem;
-    text-align: center;
-    color: whitesmoke;
-}
 
 .RightInput {
-    width: 15vw;
+    width: 100%;
     padding: 5px;
-    margin: 0 auto;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
+    margin-right: 5px;
 }
 
 .RightInput2 {
     width: 5vw;
     padding: 5px;
     margin: 0 auto;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 }
 
 .RightButton {
@@ -125,7 +120,7 @@
     background-color: #128994;
     border-radius: 7.5%;
     border: none;
-    font-size: 1.1rem;
+    font-size: 1.1vw;
 }
 
 .RightButton2 {
@@ -135,7 +130,7 @@
     background-color: rgb(57, 134, 77);
     border-radius: 7.5%;
     border: 1px solid whitesmoke;
-    font-size: 1.1rem;
+    font-size: 1.1vw;
 }
 
 .RightButton:hover {
@@ -144,4 +139,48 @@
 
 .RightButton2:hover {
     background-color: #318e17;
+}
+
+
+@media screen and (max-width: 1330px) {
+
+    .LeftContainer {
+        height: 60%;
+    }
+
+    .RightContainer {
+        height: 60%;
+    }
+}
+
+@media screen and (max-width: 906px) {
+    .RightButton {
+        font-size: 1vw;
+    }
+
+    .RightInput {
+        font-size: 1vw;
+    }
+
+    .RightContainer {
+        height: 50%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .RecordWorkoutCard {
+        flex-direction: column;
+        height: 90%;
+    }
+
+    .LeftContainer {
+        height: 80%;
+    }
+
+    .RightContainer {
+        height: 60%;
+    }
+
+    
+    
 }
