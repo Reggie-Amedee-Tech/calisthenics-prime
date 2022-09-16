@@ -2,19 +2,38 @@ import CreateRegimenForm from './components/CreateRegimenForm';
 import GetAllWorkoutsRegimens from './views/GetAllWorkoutsRegimens';
 import DetailedRegimenPage from './views/DetailedRegimenPage';
 import RecordWorkout from './components/RecordWorkout';
-import {Routes, Route} from 'react-router-dom'
-import './App.css';
-
+import { useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom'
+import classes from './App.module.css';
 
 function App() {
-  
+
+  const navigate = useNavigate()
+
   return (
-    <Routes>
-      <Route path='' element={<CreateRegimenForm/>}/>
-      <Route path=":id" element={<RecordWorkout />}/>
-      <Route path="allWorkoutRegimens" element={<GetAllWorkoutsRegimens />}/>
-      <Route path="allWorkoutRegimens/:id" element={<DetailedRegimenPage />}/>
-    </Routes>
+    <div>
+      <header>
+        <div className={classes.NavBar}>
+          <div className={classes.LogoDiv}>
+            <h1 className={classes.Logo}>&copy;Strength-Track</h1>
+          </div>
+          <div className={classes.Buttons}>
+            <h1 className={classes.StartRegimen} onClick={() => {
+              navigate('')
+            }}>Start Regimen</h1>
+            <h1 className={classes.Workouts} onClick={() => {
+              navigate('allWorkoutRegimens')
+            }}>Workouts</h1>
+          </div>
+        </div>
+      </header>
+      <Routes>
+        <Route path='' element={<CreateRegimenForm />} />
+        <Route path=":id" element={<RecordWorkout />} />
+        <Route path="allWorkoutRegimens" element={<GetAllWorkoutsRegimens />} />
+        <Route path="allWorkoutRegimens/:id" element={<DetailedRegimenPage />} />
+      </Routes>
+    </div>
   );
 }
 

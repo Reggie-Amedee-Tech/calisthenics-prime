@@ -27,3 +27,9 @@ module.exports.updateRegimens = (request, response) => {
     .catch(err => response.status(400).json(err))
 }
 
+module.exports.deleteWorkout = (request, response) => {
+    exerciseQueue.deleteOne({_id: request.params.id})
+    .then(res => console.log('Regimen Successfully deleted!'))
+    .catch(err => response.status(400).json({message: err.message}))
+}
+

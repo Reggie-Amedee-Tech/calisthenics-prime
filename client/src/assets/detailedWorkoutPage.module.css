@@ -58,4 +58,19 @@
     padding: 1vw;
 }
 
+Button {
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0.8vw;
+    background-color: #128994;
+    border-radius: 7.5%;
+    border: none;
+    font-size: 1vw;
+    display: block;
+}
+
+Button:hover {
+    background-color: #48D3E0;
+    cursor: default;
+  }
 

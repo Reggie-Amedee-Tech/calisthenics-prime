@@ -1,0 +1,58 @@
+header {
+  width: 100%;
+  background-color: #945121
+}
+
+.NavBar {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.LogoDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Logo {
+  font-size: 1.5vw;
+  color: antiquewhite;
+}
+
+.Buttons {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  justify-content: space-around;
+}
+
+.Workouts {
+  font-size: 1.5vw;
+  margin-left: 40px;
+  border-radius: 7.5%;
+  background-color: #128994;
+  padding: 5px;
+}
+
+.StartRegimen {
+  font-size: 1.5vw;
+  border-radius: 7.5%;
+  background-color: #128994;
+  padding: 5px;
+}
+
+.Workouts:hover {
+  background-color: #48D3E0;
+  cursor: default;
+}
+
+.StartRegimen:hover {
+  background-color: #48D3E0;
+  cursor: default;
+}
+

@@ -1,13 +1,23 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import classes from '../assets/detailedWorkoutPage.module.css'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const DetailedRegimenPage = () => {
     const location = useLocation()
     const [workout, setWorkout] = useState([])
     const [loaded, setLoaded] = useState(false)
+    const navigate = useNavigate()
     const id = location.pathname.slice(20)
+
+    const deleteRegimen = (id) => {
+        axios.delete(`http://localhost:5003/api/regimen/${id}/deleteExercise`)
+        .then(res => {
+            console.log(res)
+
+        })
+        .catch(err => console.log(err.message))
+    }
 
     useEffect(() => {
         axios.get(`http://localhost:5003/api/regimen/workoutRegimens/${id}`)
@@ -47,6 +57,10 @@ const DetailedRegimenPage = () => {
                         })}
                     </tbody>
                 </table>
+                <button onClick={() => {
+                    deleteRegimen(id)
+                    navigate('/allWorkoutRegimens')
+                }} classname={classes.Button}>Delete Regimen</button>
             </div>
         </div>
     )
