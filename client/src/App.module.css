@@ -20,7 +20,7 @@ header {
 }
 
 .Logo {
-  font-size: 1.5vw;
+  font-size: 1vw;
   color: antiquewhite;
 }
 
@@ -32,18 +32,18 @@ header {
 }
 
 .Workouts {
-  font-size: 1.5vw;
+  font-size: 1vw;
   margin-left: 40px;
   border-radius: 7.5%;
   background-color: #128994;
-  padding: 5px;
+  padding: 0.2vw;
 }
 
 .StartRegimen {
-  font-size: 1.5vw;
+  font-size: 1vw;
   border-radius: 7.5%;
   background-color: #128994;
-  padding: 5px;
+  padding: 0.2vw;
 }
 
 .Workouts:hover {
