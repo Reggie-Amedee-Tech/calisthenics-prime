@@ -8,6 +8,7 @@ const CreateRegimenForm = () => {
     const [workoutRegimen, setWorkoutRegimen] = useState('');
     const [workouts, setWorkouts] = useState([])
     const [workout, setWorkout] = useState([])
+    const [errors, setErrors] = useState([])
 
     const navigate = useNavigate()
 
@@ -25,13 +26,20 @@ const CreateRegimenForm = () => {
         })
             .then(res => {
                 setWorkout([res.data])
-                console.log(res)    
+                console.log(res)
             })
             .catch(err => {
+                const errorResponse = err.response.data.errors
+                const errArr = []
+                for (const key of Object.keys(errorResponse)) {
+                    errArr.push(errorResponse[key].message)
+                }
+                setErrors(errArr)
+                console.log(errArr)
                 console.log(err)
-            })      
+            })
     }
-    
+
     useEffect(() => {
         if (id === undefined) {
             return
@@ -40,7 +48,7 @@ const CreateRegimenForm = () => {
         }
     }, [workout])
 
-    
+
 
     return (
         <div className={classes.Div}>
@@ -56,7 +64,10 @@ const CreateRegimenForm = () => {
                         <div className={classes.Right}>
                             <div className={classes.RightContainer}>
                                 <h3 className={classes.RightH3}>Create Workout Regimen</h3>
-                                <input type="text" placeholder='Input Here' onChange={(e) => setWorkoutRegimen(e.target.value)} className={classes.RightInput} />
+                                {errors.length > 0 ? <div className={classes.RightInputWithError}>
+                                    <input type="text" placeholder='Type Here' onChange={(e) => setWorkoutRegimen(e.target.value)} className={classes.RightInput} />
+                                    {errors.map((err, i) => <p key={i} className={classes.ErrorMessage}>Please enter a workout name!</p>)}
+                                </div> : <input type="text" placeholder='Type Here' onChange={(e) => setWorkoutRegimen(e.target.value)} className={classes.RightInput} />}
                                 <button type="submit" className={classes.RightButton}>Create</button>
                             </div>
                         </div>

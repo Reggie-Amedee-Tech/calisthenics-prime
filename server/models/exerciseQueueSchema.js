@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 
 const exerciseQueue = new mongoose.Schema({
     workoutRegimen: {
-        type: String
+        type: String,
+        required: true
     },
     workouts: {
         type: Array

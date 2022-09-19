@@ -42,25 +42,31 @@ const RecordWorkout = () => {
                     <div className={classes.RecordWorkoutCard}>
                         <div className={classes.Left}>
                             <div className={classes.LeftContainer}>
-                            <h3 className={classes.LeftH3}><span>&copy;</span>Strength-Track</h3>
+                                <h3 className={classes.LeftH3}><span>&copy;</span>Strength-Track</h3>
                                 <p className={classes.LeftP}>Please log the workout name and the amount of reps that were performed! Once executed, please select add exercise and the form will reset to its initial state, which means your current workout was saved. You are able to add multiple exercises. Once you are done, please select "Record Exercise" to see the results on your dashboard.</p>
                             </div>
                         </div>
                         <div className={classes.Right}>
                             <div className={classes.RightContainer}>
                                 <div className={classes.RightTop}>
-                                <div className={classes.RightTopInputs}>
-                                <input type='text' onChange={e => setWorkoutName(e.target.value)} value={workoutName} className={classes.RightInput}/>
-                                <input type="number" onChange={e => setReps(e.target.value)} className={classes.RightInput2} value={reps}/>
-                                </div>
-                                <div className={classes.RightTopButton}>
-                                <button onClick={() => {
-                                    addWorkout({
-                                        workoutName: workoutName,
-                                        reps: reps
-                                    })
-                                }} className={classes.RightButton}>Add Exercise</button>
-                                </div>
+                                    <div className={classes.RightTopInputs}>
+                                        <div>
+                                            <label>Workout Name</label>
+                                            <input type='text' onChange={e => setWorkoutName(e.target.value)} value={workoutName} className={classes.RightInput} />
+                                        </div>
+                                        <div>
+                                            <label>Reps</label>
+                                            <input type="number" onChange={e => setReps(e.target.value)} className={classes.RightInput2} value={reps} />
+                                        </div>
+                                    </div>
+                                    <div className={classes.RightTopButton}>
+                                        <button onClick={() => {
+                                            addWorkout({
+                                                workoutName: workoutName,
+                                                reps: reps
+                                            })
+                                        }} className={classes.RightButton}>Add Exercise</button>
+                                    </div>
                                 </div>
                                 <button onClick={() => {
                                     setDone(true)

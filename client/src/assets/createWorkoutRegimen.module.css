@@ -83,6 +83,18 @@
     color: whitesmoke;
 }
 
+.RightInputWithError {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ErrorMessage{
+    color: red;
+    font-size: 1vw;
+    margin: 0 auto;
+}
+
 .RightInput {
     width: 15vw;
     padding: 5px;
