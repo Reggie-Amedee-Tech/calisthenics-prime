@@ -9,6 +9,7 @@ import classes from './App.module.css';
 function App() {
 
   const navigate = useNavigate()
+  console.log('test')
 
   return (
     <div>
