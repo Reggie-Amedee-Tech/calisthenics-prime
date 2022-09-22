@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "proxy": "https://damp-stream-65216.herokuapp.com/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
