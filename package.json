@@ -1,0 +1,20 @@
+{
+  "name": "calisthenics-prime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reggie-Amedee-Tech/calisthenics-prime.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reggie-Amedee-Tech/calisthenics-prime/issues"
+  },
+  "homepage": "https://github.com/Reggie-Amedee-Tech/calisthenics-prime#readme"
+}
