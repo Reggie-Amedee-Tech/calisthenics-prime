@@ -1,1 +1,1 @@
-web: node server.js
+web: nodemongit a server.js
