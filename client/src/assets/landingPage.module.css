@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.Div {
+    width: 100%;
+}
+
+.Container{
+    max-width: 1200px;
+    width: 90%;
+    height: 100vh;
+}
+
+.PicContainer {
+    width: 100vw;
+    height: 70vh;
+    border: 1px solid red;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.H1 {
+    color: white;
+}
+
+.BottomContainer {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid blue;
+}
