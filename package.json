@@ -1,6 +1,9 @@
 {
   "name": "calisthenics-prime",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.14.1"
+    },
   "description": "",
   "main": "index.js",
   "proxy": "http://localhost:3000",
