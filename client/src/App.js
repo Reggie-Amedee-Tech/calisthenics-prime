@@ -10,7 +10,7 @@ import classes from './App.module.css';
 function App() {
 
   const navigate = useNavigate()
-  console.log('test2')
+  console.log('test3')
 
   return (
     <div>
