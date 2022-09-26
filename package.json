@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd client && npm run build",
     "server": "nodemon server/server.js",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
     
