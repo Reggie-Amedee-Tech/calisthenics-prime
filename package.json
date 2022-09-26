@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
     "node": "16.14.1"
-    },
+  },
   "description": "",
   "main": "index.js",
   "proxy": "http://localhost:3000",
@@ -15,7 +15,6 @@
     "heroku-postbuild": "cd client && npm install && npm run build",
     "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\"",
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
-    
   },
   "repository": {
     "type": "git",
@@ -27,5 +26,13 @@
   "bugs": {
     "url": "https://github.com/Reggie-Amedee-Tech/calisthenics-prime/issues"
   },
-  "homepage": "https://github.com/Reggie-Amedee-Tech/calisthenics-prime#readme"
+  "homepage": "https://github.com/Reggie-Amedee-Tech/calisthenics-prime#readme",
+  "dependencies": {
+    "concurrently": "^7.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.1",
+    "nodemon": "^2.0.20"
+  }
 }
