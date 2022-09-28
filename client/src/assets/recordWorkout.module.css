@@ -182,3 +182,74 @@
     }
 
 }
+
+
+@media screen and (max-width: 1330px) {
+
+    .LeftContainer {
+        height: 60%;
+    }
+
+    .RightContainer {
+        height: 60%;
+    }
+}
+
+@media screen and (max-width: 906px) {
+    .RightButton {
+        font-size: 1vw;
+    }
+
+    .RightInput {
+        font-size: 1vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .RegimenCard {
+        flex-direction: column;
+        height: 90%;
+    }
+    
+    .Left{
+        display: none;
+    }
+    
+    .Right{
+        height: 90%;
+        flex: none;
+        margin: auto 0;
+    }
+    
+    .RightInput{
+        width: 30vw;
+        height: 2vh;
+        font-size: 4vw;
+    }
+    
+    .RightInput2 {
+        width: 10vw;
+        height: 2vh;
+        font-size: 4vw;
+    }
+    
+    .RightH3{
+        font-size: 30px;
+    }
+    
+    .RightButton {
+        white-space: nowrap;
+        padding: 3px;
+        width: 100px;
+        font-size: 1rem;
+        
+    }
+
+    .RightButton2 {
+        padding: 3px;
+        width: 100px;
+        font-size: 1rem;
+    }
+
+    
+}
