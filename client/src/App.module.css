@@ -58,16 +58,21 @@ header {
 
 @media screen and (max-width: 800px) {
   .Logo {
-    font-size: 20px;
+    font-size: 15px;
+    
   }
 
   .Workouts {
     font-size: 13px;
+    padding: 3px;
+    align-self: center;
   }
 
   .StartRegimen {
     font-size: 13px;
     white-space: nowrap;
+    padding: 3px;
+    align-self: center;
   }
   
   
