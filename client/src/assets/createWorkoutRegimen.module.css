@@ -144,12 +144,31 @@
         height: 90%;
     }
 
-    .LeftContainer {
-        height: 80%;
+    .Left{
+        display: none;
     }
 
-    .RightContainer {
-        height: 80%;
+    .Right{
+        height: 90%;
+        flex: none;
+        margin: auto 0;
+    }
+
+    .RightInput{
+        width: 30vw;
+        height: 2vh;
+        font-size: 4vw;
+    }
+
+    .RightH3{
+        font-size: 30px;
+    }
+
+    .RightButton {
+        width: 20vw;
+        font-size: 1rem;
+        padding: 10px;
+        
     }
     
 }
