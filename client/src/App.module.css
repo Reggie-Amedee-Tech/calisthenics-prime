@@ -56,3 +56,20 @@ header {
   cursor: default;
 }
 
+@media screen and (max-width: 800px) {
+  .Logo {
+    font-size: 20px;
+  }
+
+  .Workouts {
+    font-size: 13px;
+  }
+
+  .StartRegimen {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  
+  
+}
+
