@@ -46,4 +46,9 @@ module.exports = function(app) {
             response.status(500).send({message: "Email is invalid", e})
         })
     })
+
+    // app.post("/logout", (request, response) => {
+    //         response.clearCookie('tmtoken');
+    //         response.json({ message: 'You are logged out!' })
+    // })
 }
