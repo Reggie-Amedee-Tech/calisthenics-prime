@@ -15,6 +15,7 @@ app.use(express.urlencoded({extended: true}))
 
 require('./routes/exercise.routes')(app)
 require('./routes/exerciseQueue.routes')(app)
+require('./routes/user.routes')(app)
 
 
 app.use(express.static(path.resolve(__dirname, "../client/build")))
