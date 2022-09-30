@@ -10,6 +10,9 @@ const exerciseQueue = new mongoose.Schema({
     },
     completionTime: {
         type: String
+    },
+    createdBy: {
+        type: String,
     }
 }, {timestamps: true})
 

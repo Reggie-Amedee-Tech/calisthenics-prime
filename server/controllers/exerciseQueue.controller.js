@@ -1,16 +1,23 @@
 const exerciseQueue = require('../models/exerciseQueueSchema')
+const jwt = require('jsonwebtoken')
 
 module.exports.createExersizeQueue = (request,response) => {
     const { workoutRegimen } = request.body
+    const decodedJwt = jwt.decode(request.cookies.token, {complete: true})
+    const userId = decodedJwt.payload.id
+    console.log(decodedJwt)
     exerciseQueue.create({
-        workoutRegimen
+        workoutRegimen,
+        createdBy: userId
     })
     .then(res => response.json(res))
     .catch(err => response.status(400).json(err))
 }
 
 module.exports.getRegimens = (request,response) => {
-    exerciseQueue.find()
+    const decodedJwt = jwt.decode(request.cookies.token, {complete: true})
+    const userId = decodedJwt.payload.id
+    exerciseQueue.find({createdBy: userId})
     .then(res => response.status(200).json(res))
     .catch(err => response.status(400).json({message: err.message}))
 }

@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const path = require('path')
+const cookieParser = require('cookie-parser')
 
 require('dotenv').config()
 const PORT = process.env.PORT || 5003
@@ -12,8 +13,9 @@ connectDB()
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+app.use(cookieParser())
 
-require('./routes/exercise.routes')(app)
+
 require('./routes/exerciseQueue.routes')(app)
 require('./routes/user.routes')(app)
 
