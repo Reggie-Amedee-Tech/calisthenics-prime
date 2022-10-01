@@ -10,7 +10,6 @@ const GetAllWorkoutsRegimens = () => {
   const workoutRegimen = useSelector(state => state.getWorkoutRegimens)
   const dispatch = useDispatch()
 
-
   useEffect(() => {
     dispatch(getWorkoutRegimens())
   }, [])

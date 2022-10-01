@@ -3,6 +3,8 @@ import GetAllWorkoutsRegimens from './views/GetAllWorkoutsRegimens';
 import DetailedRegimenPage from './views/DetailedRegimenPage';
 import RecordWorkout from './components/RecordWorkout';
 import LandingPage from './views/LandingPage';
+import SignUpPage from './views/SignUpPage';
+import LoginPage from './views/LoginPage';
 import { useNavigate } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom'
 import classes from './App.module.css';
@@ -30,8 +32,8 @@ function App() {
       </header>
       <Routes>
         
-        <Route path='' element={<CreateRegimenForm />} />
-        <Route path='homepage' element={<LandingPage/>}/>
+        <Route path='' element={ <SignUpPage/>} />
+        <Route path='homepage' element={<CreateRegimenForm />}/>
         <Route path=":id" element={<RecordWorkout />} />
         <Route path="allWorkoutRegimens" element={<GetAllWorkoutsRegimens />} />
         <Route path="allWorkoutRegimens/:id" element={<DetailedRegimenPage />} />

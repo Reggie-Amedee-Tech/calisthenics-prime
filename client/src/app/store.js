@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import exerciseSliceReducer from '../features/GetExercises'
 import workoutRegimenSliceReducer from '../features/GetWorkoutRegimens.js'
+import userReducer from '../features/user/userSlice'
 
 const store = configureStore({
     reducer: {
-        getExercise: exerciseSliceReducer,
-        getWorkoutRegimens: workoutRegimenSliceReducer
+        getWorkoutRegimens: workoutRegimenSliceReducer,
+        user: userReducer
     }
 })
 
