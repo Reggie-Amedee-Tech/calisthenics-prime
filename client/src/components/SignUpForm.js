@@ -30,6 +30,7 @@ const SignUpForm = () => {
         // transform email string to lowercase to avoid case sensitivity issues during login
         data.email = data.email.toLowerCase()
         dispatch(registerUser(data))
+        navigate('/login')
         console.log(data)
     }
 

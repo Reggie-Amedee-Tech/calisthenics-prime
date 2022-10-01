@@ -1,8 +1,10 @@
 import React from 'react'
 import classes from '../assets/landingPage.module.css'
-import model from '../pictures/model4.png'
+import {useNavigate} from 'react-router-dom'
 
 const LandingPage = () => {
+
+  const navigate = useNavigate()
   return (
     <div className={classes.Div}>
       <div className={classes.Container}>
@@ -12,6 +14,8 @@ const LandingPage = () => {
         </div>
         <div className={classes.BottomContainer}>
           <div>
+            <button onClick={() => navigate('register')}>Register</button>
+            <button onClick={() => navigate('login')}>Login</button>
 
           </div>
         </div>

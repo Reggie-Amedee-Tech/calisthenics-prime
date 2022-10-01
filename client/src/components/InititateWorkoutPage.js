@@ -16,6 +16,10 @@ const InititateWorkoutPage = (props) => {
     const id = location.pathname.slice(1)
     console.log(id)
 
+    const instance = axios.create({
+        withCredentials: true
+    });
+
     useEffect(() => {
         let interval = null;
         if (timeOn) {
@@ -44,7 +48,7 @@ const InititateWorkoutPage = (props) => {
     }
 
     const recordTime = () => {
-        axios.put(`http://localhost:5003/api/regimen/${id}/exerciseQueueUpdate`, {
+        instance.put(`http://localhost:3000/api/regimen/${id}/exerciseQueueUpdate`, {
             completionTime
         })
             .then(res => console.log(res))

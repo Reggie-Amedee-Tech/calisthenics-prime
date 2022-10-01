@@ -19,14 +19,13 @@ const userSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: {
-        // register user
         [registerUser.pending]: (state) => {
             state.loading = true
             state.error = null
         },
         [registerUser.fulfilled]: (state, { payload }) => {
             state.loading = false
-            state.success = true // registration successful
+            state.success = true 
         },
         [registerUser.rejected]: (state, { payload }) => {
             state.loading = false
@@ -38,7 +37,6 @@ const userSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: {
-        // login user
         [loginUser.pending]: (state) => {
             state.loading = true
             state.error = null

@@ -15,6 +15,10 @@ const RecordWorkout = () => {
     const id = location.pathname.slice(1)
     const navigate = useNavigate()
 
+    const instance = axios.create({
+        withCredentials: true
+    });
+
     console.log(id)
 
     const addWorkout = object => {
@@ -28,7 +32,7 @@ const RecordWorkout = () => {
     }
 
     const saveWorkout = () => {
-        axios.put(`http://localhost:5003/api/regimen/${id}/exerciseQueueUpdate`, {
+        instance.put(`http://localhost:3000/api/regimen/${id}/exerciseQueueUpdate`, {
             workouts
         })
             .then(res => console.log(res))

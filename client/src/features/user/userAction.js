@@ -1,11 +1,15 @@
 import { createAsyncThunk} from "@reduxjs/toolkit";
 import axios from 'axios'
 
+const instance = axios.create({
+    withCredentials: true
+});
+
 export const registerUser = createAsyncThunk('user/register', async ({ userName, email, password }, { rejectWithValue }) => {
     try {
         const config = {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             }
         }
         await axios.post('http://localhost:5003/register', {
@@ -27,13 +31,14 @@ export const loginUser = createAsyncThunk('user/login', async ({ email, password
     try {
         const config = {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                
             },
         }
         const { data } = await axios.post('http://localhost:5003/login', {
             email,
             password
-        }, config)
+        } , config)
 
         localStorage.setItem('userToken', data.userToken)
         return data

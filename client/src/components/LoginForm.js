@@ -1,15 +1,18 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { useDispatch, useSelector } from 'react-redux'
-import { loginUser} from '../features/user/userAction'
+import { loginUser } from '../features/user/userAction'
+import { useNavigate } from 'react-router-dom'
 
 const LoginForm = () => {
   const { loading, error } = useSelector((state) => state.user)
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const { register, handleSubmit } = useForm()
 
   const submitForm = (data) => {
     dispatch(loginUser(data))
+    navigate('/homepage')
     console.log(data)
   }
 

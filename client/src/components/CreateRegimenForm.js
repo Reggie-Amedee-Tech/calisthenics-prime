@@ -10,6 +10,10 @@ const CreateRegimenForm = () => {
     const [workout, setWorkout] = useState([])
     const [errors, setErrors] = useState([])
 
+    const instance = axios.create({
+        withCredentials: true
+    });
+
     const navigate = useNavigate()
 
     let id = workout.map(werk => {
@@ -20,7 +24,7 @@ const CreateRegimenForm = () => {
 
     const createWorkout = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5003/api/regimen/exerciseQueueCreate', {
+        instance.post('http://localhost:3000/api/regimen/exerciseQueueCreate', {
             workoutRegimen,
             workouts
         })
@@ -44,7 +48,7 @@ const CreateRegimenForm = () => {
         if (id === undefined) {
             return
         } else {
-            navigate(`${id}`)
+            navigate(`/${id}`)
         }
     }, [workout])
 

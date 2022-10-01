@@ -8,8 +8,12 @@ const StartWorkoutRegimen = () => {
     const location = useLocation()
     const id = location.pathname.slice(20)
 
+    const instance = axios.create({
+        withCredentials: true
+    });
+
     useEffect(() => {
-        axios.get(`http://localhost:5003/api/regimen/workoutRegimens/${id}`)
+        instance.get(`http://localhost:3000/api/regimen/workoutRegimens/${id}`)
             .then(res => {
                 setDetailedWorkout([res.data])
             })

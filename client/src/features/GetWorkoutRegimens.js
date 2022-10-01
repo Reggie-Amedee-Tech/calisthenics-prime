@@ -9,7 +9,7 @@ const initialState = {
 }
 
 export const getWorkoutRegimens = createAsyncThunk('workoutRegimen/getWorkoutRegimens', async () => {
-    const res = await axios.get('http://localhost:5003/api/regimen/workoutRegimens')
+    const res = await axios.get('http://localhost:3000/api/regimen/workoutRegimens')
     .then(res => {
         return res.data.map(exercise => exercise)
     })
