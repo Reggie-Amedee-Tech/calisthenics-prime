@@ -23,44 +23,25 @@ export const registerUser = createAsyncThunk('user/register', async ({ userName,
 })
 
 
-// export const login = createAsyncThunk('login/loginUser', async ({ email, password }, { rejectWithValue }) => {
-//     try {
-//         const config = {
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//         }
-//         const { data } = await axios.post('http://localhost:5003/login', {
-//             email,
-//             password
-//         }, config)
+export const loginUser = createAsyncThunk('user/login', async ({ email, password }, { rejectWithValue }) => {
+    try {
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        }
+        const { data } = await axios.post('http://localhost:5003/login', {
+            email,
+            password
+        }, config)
 
-//         localStorage.setItem('userToken', data.userToken)
-//         return data
-//     } catch (error) {
-//         if (error.response && error.response.data.message) {
-//             return rejectWithValue(error.response.data.message)
-//         } else {
-//             return rejectWithValue(error.message)
-//         }
-//     }
-// })
-
-// const loginSliceReducer = createSlice({
-//     name: "login",
-//     initialState,
-//     extraReducers: builder => {
-//         builder.addCase(login.pending, state => {
-//             state.loading = true
-//         })
-//         builder.addCase(login.fulfilled, (state, action) => {
-//             state.loading = false
-//             state.user = action.payload
-//         })
-//         builder.addCase(login.rejected, (state, action) => {
-//             state.loading = false
-//             state.user = []
-//             state.error = action.error.message
-//         })
-//     }
-// })
+        localStorage.setItem('userToken', data.userToken)
+        return data
+    } catch (error) {
+        if (error.response && error.response.data.message) {
+            return rejectWithValue(error.response.data.message)
+        } else {
+            return rejectWithValue(error.message)
+        }
+    }
+})

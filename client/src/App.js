@@ -33,6 +33,7 @@ function App() {
       <Routes>
         
         <Route path='' element={ <SignUpPage/>} />
+        <Route path="login" element={<LoginPage />}/>
         <Route path='homepage' element={<CreateRegimenForm />}/>
         <Route path=":id" element={<RecordWorkout />} />
         <Route path="allWorkoutRegimens" element={<GetAllWorkoutsRegimens />} />

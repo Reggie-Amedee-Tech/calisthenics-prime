@@ -1,14 +1,23 @@
-import React, { useState } from 'react'
+import React, {useEffect} from 'react'
 import { useForm } from 'react-hook-form'
 import { registerUser } from '../features/user/userAction'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 const SignUpForm = () => {
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
     const { register, handleSubmit } = useForm()
+    const navigate = useNavigate()
 
-    const { loading, error } = useSelector(state => state.user)
+    const { loading, error, userInfo, success } = useSelector(state => state.user)
+
+    useEffect(() => {
+        // redirect user to login page if registration was successful
+        if (success) navigate('/login')
+        // redirect authenticated user to profile screen
+        if (userInfo) navigate('/user-profile')
+      }, [navigate, userInfo, success])
 
 
     const submitForm = (data) => {
