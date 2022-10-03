@@ -8,12 +8,12 @@ import { useSelector } from 'react-redux';
 const CreateRegimenForm = () => {
     const [workoutRegimen, setWorkoutRegimen] = useState('');
     const [workouts, setWorkouts] = useState([])
+    const [createdBy, setCreatedBy] = useState('')
     const [workout, setWorkout] = useState([])
     const [errors, setErrors] = useState([])
 
+    const {userToken} = useSelector((state) => state.user)
 
-    
-    
 
     const instance = axios.create({
         withCredentials: true
@@ -31,6 +31,7 @@ const CreateRegimenForm = () => {
         e.preventDefault();
         instance.post('http://localhost:3000/api/regimen/exerciseQueueCreate', {
             workoutRegimen,
+            createdBy,
             workouts
         })
             .then(res => {
@@ -49,6 +50,8 @@ const CreateRegimenForm = () => {
             })
     }
 
+    console.log(createdBy)
+
     useEffect(() => {
         if (id === undefined) {
             return
@@ -57,11 +60,13 @@ const CreateRegimenForm = () => {
         }
     }, [workout])
 
+    
+
 
 
     return (
         <div className={classes.Div}>
-            <form onSubmit={createWorkout}>
+            {userToken ? <form onSubmit={createWorkout}>
                 <div className={classes.Container}>
                     <div className={classes.RegimenCard}>
                         <div className={classes.Left}>
@@ -82,7 +87,7 @@ const CreateRegimenForm = () => {
                         </div>
                     </div>
                 </div>
-            </form>
+            </form> : <h1>Unauthorized :(</h1>}
         </div>
     )
 }

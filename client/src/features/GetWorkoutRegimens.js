@@ -1,12 +1,16 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import { useSelector } from 'react-redux'
 import axios from 'axios'
 
 const initialState = {
     loading: false,
     workoutRegimens: [],
-    error: ''
+    error: '',
+    userInfo: null
     
 }
+
+
 
 export const getWorkoutRegimens = createAsyncThunk('workoutRegimen/getWorkoutRegimens', async () => {
     const res = await axios.get('http://localhost:3000/api/regimen/workoutRegimens')

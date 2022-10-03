@@ -49,3 +49,8 @@ module.exports.login = (request, response) => {
             response.status(500).send({message: "Email is invalid", e})
         })
     }
+
+    module.exports.logout = (request,response) => {
+        response.clearCookie('RANDOM_TOKEN');
+        response.json({ message: 'You are logged out!' })     
+    }

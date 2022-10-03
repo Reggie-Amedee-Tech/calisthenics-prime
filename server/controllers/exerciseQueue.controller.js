@@ -3,15 +3,21 @@ const jwt = require('jsonwebtoken')
 
 module.exports.createExersizeQueue = (request,response) => {
     const { workoutRegimen } = request.body
+    const decodedJwt = jwt.decode(request.cookies.token, {complete: true})
+    const userId = decodedJwt.payload.userId
+    
     exerciseQueue.create({
         workoutRegimen,
-        createdBy
+        createdBy: userId
     })
     .then(res => response.json(res))
     .catch(err => response.status(400).json(err))
 }
 
 module.exports.getRegimens = (request,response) => {
+    const decodedJwt = jwt.decode(request.cookies.token, {complete: true})
+    const userId = decodedJwt.payload.userId
+    console.log(userId)
     exerciseQueue.find({createdBy: userId})
     .then(res => response.status(200).json(res))
     .catch(err => response.status(400).json({message: err.message}))

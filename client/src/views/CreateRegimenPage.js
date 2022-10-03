@@ -4,18 +4,9 @@ import CreateRegimenForm from '../components/CreateRegimenForm'
 
 const CreateRegimenPage = () => {
 
-    
-    const {loading, success} = useSelector((state) => state.user)
-    
-
-    useEffect(() => {
-
-    }, [success, loading])
-    
   return (
     <div>
-
-        {<CreateRegimenForm />}
+        <CreateRegimenForm />
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useEffect,useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { getWorkoutRegimens } from '../features/GetWorkoutRegimens.js';
@@ -8,6 +8,8 @@ const GetAllWorkoutsRegimens = () => {
   const [loaded, setLoaded] = useState(false)
 
   const workoutRegimen = useSelector(state => state.getWorkoutRegimens)
+  const { userToken } = useSelector((state) => state.user)
+  console.log(userToken)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -16,30 +18,31 @@ const GetAllWorkoutsRegimens = () => {
 
   useEffect(() => {
     setLoaded(true)
-  },[loaded])
+  }, [loaded])
 
   return (
+
     <div className={classes.Div}>
-      <div className={classes.Container}>
+      {userToken ? <div className={classes.Container}>
         <table className={classes.Table}>
           <thead>
             {
               loaded === false ? <tr className={classes.TableRow}>
                 <th className={classes.TableHead}>Loading...</th>
               </tr> : <tr className={classes.TableRow}>
-              <th className={classes.TableHead}>Regimen Name</th>
-              <th className={classes.TableHead}>Workouts Completed</th>
-              <th className={classes.TableHead}>Date</th>
-              <th className={classes.TableHead}>Time</th>
-              <th className={classes.TableHead}>View</th>
-            </tr>
+                <th className={classes.TableHead}>Regimen Name</th>
+                <th className={classes.TableHead}>Workouts Completed</th>
+                <th className={classes.TableHead}>Date</th>
+                <th className={classes.TableHead}>Time</th>
+                <th className={classes.TableHead}>View</th>
+              </tr>
             }
           </thead>
           <tbody>
             {workoutRegimen.workoutRegimens.map(workout => {
               let arr = []
-              let date = workout.createdAt.slice(0,10)
-              let year = workout.createdAt.slice(0,4)
+              let date = workout.createdAt.slice(0, 10)
+              let year = workout.createdAt.slice(0, 4)
 
               for (let i = 0; i < date.length; i++) {
                 if (i > 4) {
@@ -48,7 +51,7 @@ const GetAllWorkoutsRegimens = () => {
               }
 
               const workoutDate = arr.toString().replace(/,/g, "") + "-" + year
-              
+
               return <tr key={workout._id} className={classes.TableBottomRow}>
                 <td className={classes.TableData}>{workout.workoutRegimen}</td>
                 <td className={classes.TableData}>{workout.workouts.length}</td>
@@ -60,6 +63,7 @@ const GetAllWorkoutsRegimens = () => {
           </tbody>
         </table>
       </div>
+        : <h1>Unauthorized :(</h1>}
     </div>
   )
 }

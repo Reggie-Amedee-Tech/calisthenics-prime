@@ -35,12 +35,12 @@ export const loginUser = createAsyncThunk('user/login', async ({ email, password
                 
             },
         }
-        const { data } = await axios.post('http://localhost:5003/login', {
+        const { data } = await instance.post('http://localhost:5003/login', {
             email,
             password
         } , config)
 
-        localStorage.setItem('userToken', data.userToken)
+        localStorage.setItem('userToken', data.token)
         return data
     } catch (error) {
         if (error.response && error.response.data.message) {
@@ -50,3 +50,26 @@ export const loginUser = createAsyncThunk('user/login', async ({ email, password
         }
     }
 })
+
+export const getUserDetails = createAsyncThunk(
+    'user/getUserDetails',
+    async (arg, { getState, rejectWithValue }) => {
+      try {
+        const { user } = getState()
+  
+        const config = {
+          headers: {
+            Authorization: `Bearer ${user.userToken}`,
+          },
+        }
+        const { data } = await instance.get(`/api/user/profile`, config)
+        return data
+      } catch (error) {
+        if (error.response && error.response.data.message) {
+          return rejectWithValue(error.response.data.message)
+        } else {
+          return rejectWithValue(error.message)
+        }
+      }
+    }
+  )
