@@ -38,7 +38,7 @@ module.exports.login = (request, response) => {
                     userId: user._id,
                     userEmail: user.email
                 }, "RANDOM_TOKEN", {expiresIn: "24h"})
-                response.status(200).send({message: "Login Successful", email: user.email, token})
+                response.status(200).send({message: "Login Successful", email: user.email, id: user._id, token})
                 
             })
             .catch((e) => {

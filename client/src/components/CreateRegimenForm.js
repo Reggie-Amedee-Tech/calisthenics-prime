@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import classes from '../assets/createWorkoutRegimen.module.css'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux';
 
 
 const CreateRegimenForm = () => {
@@ -9,6 +10,10 @@ const CreateRegimenForm = () => {
     const [workouts, setWorkouts] = useState([])
     const [workout, setWorkout] = useState([])
     const [errors, setErrors] = useState([])
+
+
+    
+    
 
     const instance = axios.create({
         withCredentials: true
