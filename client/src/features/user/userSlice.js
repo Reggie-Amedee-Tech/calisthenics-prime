@@ -6,13 +6,17 @@ const userToken = localStorage.getItem('userToken')
     ? localStorage.getItem('userToken')
     : null
 
-const id = localStorage.getItem('id') ? localStorage.getItem('id') : null
+    const email = localStorage.getItem('email')
+    ? localStorage.getItem('email')
+    : null
+
+const userId = localStorage.getItem('id') ? localStorage.getItem('id') : null
 
 const initialState = {
     loading: false,
     userInfo: null,
     userToken,
-    id: null,
+    userId,
     error: null,
     success: false,
 }
@@ -52,6 +56,7 @@ const userSlice = createSlice({
             state.userInfo = payload
             state.success = true
             state.userToken = payload.token
+            state.userId = payload.id
         },
         [loginUser.rejected]: (state, { payload }) => {
             state.loading = false

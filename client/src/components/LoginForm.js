@@ -13,7 +13,6 @@ const LoginForm = () => {
   const submitForm = (data) => {
     dispatch(loginUser(data))
     navigate('/homepage')
-    console.log(data)
   }
 
   return (

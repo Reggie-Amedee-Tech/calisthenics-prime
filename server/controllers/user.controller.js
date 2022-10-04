@@ -37,8 +37,12 @@ module.exports.login = (request, response) => {
                 const token = jwt.sign({
                     userId: user._id,
                     userEmail: user.email
-                }, "RANDOM_TOKEN", {expiresIn: "24h"})
-                response.status(200).send({message: "Login Successful", email: user.email, id: user._id, token})
+                }, "RANDOM_TOKEN", {expiresIn: "3m"})
+                return response.cookie('access_token', token, {
+                    httpOnly: true
+                }).status(200).json({message: "Login Successful", email: user.email, id: user._id, token})
+
+                // status(200).send({message: "Login Successful", email: user.email, id: user._id, token})
                 
             })
             .catch((e) => {

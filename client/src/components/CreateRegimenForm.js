@@ -12,9 +12,10 @@ const CreateRegimenForm = () => {
     const [workout, setWorkout] = useState([])
     const [errors, setErrors] = useState([])
 
-    const {userToken} = useSelector((state) => state.user)
+    const {userToken, userId} = useSelector((state) => state.user)
 
 
+    console.log(typeof userId)
     const instance = axios.create({
         withCredentials: true
     });
@@ -31,11 +32,11 @@ const CreateRegimenForm = () => {
         e.preventDefault();
         instance.post('http://localhost:3000/api/regimen/exerciseQueueCreate', {
             workoutRegimen,
-            createdBy,
             workouts
         })
             .then(res => {
                 setWorkout([res.data])
+                setCreatedBy(userId)
                 console.log(res)
             })
             .catch(err => {
@@ -45,12 +46,10 @@ const CreateRegimenForm = () => {
                     errArr.push(errorResponse[key].message)
                 }
                 setErrors(errArr)
-                console.log(errArr)
-                console.log(err)
             })
     }
 
-    console.log(createdBy)
+    console.log(workout)
 
     useEffect(() => {
         if (id === undefined) {
@@ -58,11 +57,7 @@ const CreateRegimenForm = () => {
         } else {
             navigate(`/${id}`)
         }
-    }, [workout])
-
-    
-
-
+    }, [workout, createdBy])
 
     return (
         <div className={classes.Div}>

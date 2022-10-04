@@ -9,7 +9,6 @@ const GetAllWorkoutsRegimens = () => {
 
   const workoutRegimen = useSelector(state => state.getWorkoutRegimens)
   const { userToken } = useSelector((state) => state.user)
-  console.log(userToken)
   const dispatch = useDispatch()
 
   useEffect(() => {
