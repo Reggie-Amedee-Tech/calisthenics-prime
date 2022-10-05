@@ -19,8 +19,6 @@ const RecordWorkout = () => {
         withCredentials: true
     });
 
-    console.log(id)
-
     const addWorkout = object => {
         setWorkouts([
             ...workouts,

@@ -20,8 +20,6 @@ function App() {
   const { userInfo, userToken } = useSelector((state) => state.user)
   const dispatch = useDispatch()
 
-  console.log(userToken)
-
   useEffect(() => {
     if (!userToken ) {
       return

@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    id: {
+    userId: {
         type: mongoose.Types.ObjectId
     },
     password: {

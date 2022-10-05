@@ -33,16 +33,13 @@ module.exports.login = (request, response) => {
                 if (!passwordCheck) {
                     return response.status(400).send({message: "Password does not match!", error})
                 }
-
                 const token = jwt.sign({
                     userId: user._id,
                     userEmail: user.email
-                }, "RANDOM_TOKEN", {expiresIn: "3m"})
-                return response.cookie('access_token', token, {
+                }, "RANDOM_TOKEN", {expiresIn: "2m"})
+                return response.cookie("RANDOM_TOKEN", token, {
                     httpOnly: true
-                }).status(200).json({message: "Login Successful", email: user.email, id: user._id, token})
-
-                // status(200).send({message: "Login Successful", email: user.email, id: user._id, token})
+                }).status(200).send({message: "Login Successful", email: user.email, id: user._id, token})
                 
             })
             .catch((e) => {

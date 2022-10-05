@@ -36,8 +36,6 @@ const CreateRegimenForm = () => {
         })
             .then(res => {
                 setWorkout([res.data])
-                setCreatedBy(userId)
-                console.log(res)
             })
             .catch(err => {
                 const errorResponse = err.response.data.errors
@@ -49,15 +47,13 @@ const CreateRegimenForm = () => {
             })
     }
 
-    console.log(workout)
-
     useEffect(() => {
         if (id === undefined) {
             return
         } else {
             navigate(`/${id}`)
         }
-    }, [workout, createdBy])
+    }, [workout])
 
     return (
         <div className={classes.Div}>
