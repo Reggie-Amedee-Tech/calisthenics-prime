@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    color: white;
 }
 
 .Div {
@@ -8,29 +9,157 @@
 }
 
 .Container{
-    max-width: 1200px;
-    width: 90%;
+    width: 100%;
     height: 100vh;
+    
 }
 
-.PicContainer {
-    width: 100vw;
-    height: 70vh;
-    border: 1px solid red;
-    background-color: black;
+.Top {
+    height: 50%;
+}
+
+.TopContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.Left {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(84,84,208,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+.LeftH1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.LeftP {
+    font-size: 1rem;
+    line-height: 30px;
+    color: white;
+    width: 40em;
+}
+
+.RightPic {
+    height: 100%;
+    width: 100%;
+}
+
+.Right {
+    flex: 1;
+}
+
+.LButton {
+    background-color: whitesmoke;
+    padding: 10px;
+    color: black;
+}
+
+.Bottom{
+    height: 70%;
+    background-color: black;
+    
+}
+
+.BottomContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.BottomContainerTop {
+    border-bottom: 1.5px solid grey;
+    width: 90%;
+    margin: 0 auto;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     
 }
 
-.H1 {
+.BCTH1 {
     color: white;
 }
 
-.BottomContainer {
-    width: 100%;
-    height: 100vh;
-    border: 1px solid blue;
+.BottomContainerButton {
+    margin: 0;
+    background-color: whitesmoke;
+    color: black;
+    
 }
+
+.BottomContainerBottom {
+    width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.SocialMediaContainer {
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+}
+
+.FounderBox {
+    height: 15rem;
+    
+}
+
+.PictureFrame {
+    height: 100%;
+}
+
+.FImg {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.FounderInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40px;
+    padding: 5px;
+    justify-content: space-between;
+    
+}
+
+.SCSH1{
+    color: white;
+    font-size: 2rem;
+}
+
+.SCSP{
+    width: 20em;
+    font-size: 1.1rem;
+}
+
+.Icon {
+    width: 40px;
+    height: 40px;
+    
+}
+
+
+
+

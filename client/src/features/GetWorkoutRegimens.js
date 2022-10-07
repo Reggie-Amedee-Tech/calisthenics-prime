@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { useSelector } from 'react-redux'
 import axios from 'axios'
 
 const userId = localStorage.getItem('id') ? localStorage.getItem('id') : null
@@ -9,7 +8,6 @@ const initialState = {
     workoutRegimens: [],
     error: '',
     userInfo: null
-    
 }
 
 
