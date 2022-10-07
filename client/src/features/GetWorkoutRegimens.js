@@ -17,7 +17,7 @@ const initialState = {
 export const getWorkoutRegimens = createAsyncThunk('workoutRegimen/getWorkoutRegimens', async () => {
     const res = await axios.get('http://localhost:3000/api/regimen/workoutRegimens', {withCredentials: true})
     .then(res => {
-        return res.data.filter(user => user.createdBy !== userId)
+        return res.data.filter(user => user.createdBy === userId)
     })
     .catch(err => {
         console.log(err.message)
