@@ -15,7 +15,6 @@ const CreateRegimenForm = () => {
     const {userToken, userId} = useSelector((state) => state.user)
 
 
-    console.log(typeof userId)
     const instance = axios.create({
         withCredentials: true
     });
@@ -30,7 +29,7 @@ const CreateRegimenForm = () => {
 
     const createWorkout = (e) => {
         e.preventDefault();
-        instance.post('http://localhost:3000/api/regimen/exerciseQueueCreate', {
+        instance.post('http://localhost:5003/api/regimen/exerciseQueueCreate', {
             workoutRegimen,
             workouts
         })

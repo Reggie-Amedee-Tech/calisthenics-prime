@@ -1,9 +1,7 @@
 import { createAsyncThunk} from "@reduxjs/toolkit";
 import axios from 'axios'
 
-const instance = axios.create({
-    withCredentials: true
-});
+
 
 export const registerUser = createAsyncThunk('user/register', async ({ userName, email, password }, { rejectWithValue }) => {
     try {
@@ -35,7 +33,7 @@ export const loginUser = createAsyncThunk('user/login', async ({ email, password
                 
             },
         }
-        const { data } = await instance.post('http://localhost:5003/login', {
+        const { data } = await axios.post('http://localhost:5003/login', {
             email,
             password
         } , config)
@@ -64,7 +62,7 @@ export const getUserDetails = createAsyncThunk(
             Authorization: `Bearer ${user.userToken}`,
           },
         }
-        const { data } = await instance.get(`/api/user/profile`, config)
+        const { data } = await axios.get(`/api/user/profile`, config)
         return data
       } catch (error) {
         if (error.response && error.response.data.message) {

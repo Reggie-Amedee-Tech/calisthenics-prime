@@ -2,6 +2,8 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { useSelector } from 'react-redux'
 import axios from 'axios'
 
+const userId = localStorage.getItem('id') ? localStorage.getItem('id') : null
+
 const initialState = {
     loading: false,
     workoutRegimens: [],
@@ -13,9 +15,9 @@ const initialState = {
 
 
 export const getWorkoutRegimens = createAsyncThunk('workoutRegimen/getWorkoutRegimens', async () => {
-    const res = await axios.get('http://localhost:3000/api/regimen/workoutRegimens')
+    const res = await axios.get('http://localhost:3000/api/regimen/workoutRegimens', {withCredentials: true})
     .then(res => {
-        return res.data.map(exercise => exercise)
+        return res.data.filter(user => user.createdBy !== userId)
     })
     .catch(err => {
         console.log(err.message)
