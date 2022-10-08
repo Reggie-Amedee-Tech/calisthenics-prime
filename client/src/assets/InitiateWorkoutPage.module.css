@@ -6,7 +6,8 @@
 .Div {
     width: 100vw;
     height: 100vh;
-    background-color: #FFA96B;
+    background: rgb(2,0,36);
+    background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(30,30,75,1) 100%, rgba(0,212,255,1) 100%);
 }
 
 .Container {
@@ -17,7 +18,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #E08848
+    background: rgb(2,0,36);
+    background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(84,84,208,1) 100%, rgba(0,212,255,1) 100%);
 }
 
 .StopClockContainer {
@@ -29,7 +31,8 @@
     justify-content: space-around;
     align-items: center;
     padding: 20px;
-    background-color: #945121;
+    background: rgb(2,0,36);
+    background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(141,213,235,1) 100%);
 }
 
 .H1 {

@@ -5,7 +5,8 @@
 
 .Div {
     width: 100%;
-    background-color: #E08848
+    background: rgb(2,0,36);
+    background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(30,30,75,1) 100%, rgba(0,212,255,1) 100%);
 }
 
 .Container {
@@ -16,6 +17,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: white;
 }
 
 .RegimenCard {
@@ -30,7 +32,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #FFA96B
+    background: rgb(2,0,36);
+    background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(84,84,208,1) 100%, rgba(0,212,255,1) 100%);
     
 }
 
@@ -66,7 +69,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #945121
+    background: rgb(2,0,36);
+    background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(141,213,235,1) 100%);
 }
 
 .RightContainer {
@@ -107,10 +111,12 @@
     width: 8vw;
     margin: 0 auto;
     padding: 10px;
-    background-color: #128994;
+    background: rgb(2,0,36);
+    background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(84,84,208,1) 100%, rgba(0,212,255,1) 100%);
     border-radius: 7.5%;
     border: none;
     font-size: 1.1rem;
+    color: white;
 }
 
 .RightButton:hover {

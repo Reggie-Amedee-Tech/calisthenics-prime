@@ -12,7 +12,8 @@
 
 .Div {
     width: 100%;
-    background-color: #E08848;
+    background: rgb(2,0,36);
+    background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(84,84,208,1) 100%, rgba(0,212,255,1) 100%);
     min-height: 100vh;
 }
 
@@ -23,7 +24,8 @@
 }
 
 .TableRow {
-    background-color: #945121;
+    background: rgb(2,0,36);
+    background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(141,213,235,1) 100%);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -31,7 +33,6 @@
     border: 1px solid black;
     width: 100%;
 }
-
 
 .TableHead {
     font-size: 1vw;
@@ -62,11 +63,13 @@ Button {
     margin: 0 auto;
     margin-top: 10px;
     padding: 0.8vw;
-    background-color: #128994;
+    background: rgb(2,0,36);
+    background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(141,213,235,1) 100%);
     border-radius: 7.5%;
     border: none;
     font-size: 1vw;
     display: block;
+    color: white;
 }
 
 Button:hover {
