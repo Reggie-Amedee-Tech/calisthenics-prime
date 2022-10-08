@@ -39,7 +39,7 @@ function App() {
           <div className={classes.Buttons}>
             <h1 className={classes.StartRegimen} onClick={() => {
               navigate('homepage')
-            }}>Start Regimen</h1>
+            }}>Start</h1>
             <h1 className={classes.Workouts} onClick={() => {
               navigate('allWorkoutRegimens')
             }}>Workouts</h1>
@@ -47,9 +47,8 @@ function App() {
               dispatch(logout())
               navigate('')
             }}>Logout</h1>
-
-            <h5>{userInfo ? `Logged in as ${userInfo.email}` : "You're not logged in"}</h5>
           </div>
+          <div className={classes.User}><h5>{userInfo ? `Logged in as ${userInfo.email}` : "You're not logged in"}</h5></div>
         </div>
       </header>
       <Routes>

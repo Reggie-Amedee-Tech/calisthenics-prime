@@ -1,6 +1,7 @@
 header {
   width: 100%;
-  background-color: #945121
+  background: rgb(2,0,36);
+  background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(30,30,75,1) 100%, rgba(0,212,255,1) 100%);
 }
 
 .NavBar {
@@ -10,7 +11,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 10px;
+  padding: 20px 0px;
 }
 
 .LogoDiv {
@@ -27,23 +28,36 @@ header {
 .Buttons {
   display: flex;
   flex-direction: row;
-  width: 40%;
   justify-content: space-around;
+}
+
+.User {
+  margin: auto 0;
+  font-size: 1.5rem;
+  color: white;
 }
 
 .Workouts {
   font-size: 1vw;
   margin-left: 40px;
   border-radius: 7.5%;
-  background-color: #128994;
+  background: rgb(2,0,36);
+  background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(141,213,235,1) 100%); 
   padding: 0.2vw;
+  color: white;
+  width: 5rem;
+  text-align: center;
 }
 
 .StartRegimen {
   font-size: 1vw;
   border-radius: 7.5%;
-  background-color: #128994;
+  background: rgb(2,0,36);
+  background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(141,213,235,1) 100%); 
   padding: 0.2vw;
+  color: white;
+  width: 5rem;
+  text-align: center;
 }
 
 .Workouts:hover {

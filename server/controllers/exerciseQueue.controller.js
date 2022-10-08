@@ -5,7 +5,6 @@ module.exports.createExersizeQueue = (request,response) => {
     const { workoutRegimen, workouts, completionTime } = request.body
     const decodedJwt = jwt.decode(request.cookies.RANDOM_TOKEN, {complete: true})
     const userId = decodedJwt.payload.userId
-    console.log(userId)
     exerciseQueue.create({
         workoutRegimen,
         workouts,

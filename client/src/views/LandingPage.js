@@ -42,7 +42,6 @@ const LandingPage = () => {
                 <img src={LkIcon} alt="linkedin icon" className={classes.Icon}/>
                 </div>
               </div>
-
               <div className={classes.FounderBox}>
                   <div className={classes.PictureFrame}>
                   <img src={reggie} alt="founder" className={classes.FImg}/>
