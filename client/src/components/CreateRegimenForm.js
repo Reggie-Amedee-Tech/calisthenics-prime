@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import classes from '../assets/createWorkoutRegimen.module.css'
+import UnauthorizedPage from './UnauthorizedPage'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 
@@ -77,7 +78,7 @@ const CreateRegimenForm = () => {
                         </div>
                     </div>
                 </div>
-            </form> : <h1>Unauthorized :(</h1>}
+            </form> : <UnauthorizedPage />}
         </div>
     )
 }

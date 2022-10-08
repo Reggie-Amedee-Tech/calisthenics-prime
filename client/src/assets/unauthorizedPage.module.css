@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.Div {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+}
+
+.Container {
+    max-width: 1200px;
+    width: 90;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.UnauthorizedInfo{
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.UIH1 {
+    font-size: 10rem;
+}
+
+.UIH3{
+    font-size: 4rem;
+}
+
+.Button {
+    font-size: 2rem;
+    padding: 10px;
+}

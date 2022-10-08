@@ -16,13 +16,10 @@ const SignUpForm = () => {
 
 
     const submitForm = (data) => {
-
         if (data.password !== data.confirmPassword) {
             alert('Password mismatch')
             return
           }
-
-        // transform email string to lowercase to avoid case sensitivity issues during login
         data.email = data.email.toLowerCase()
         dispatch(registerUser(data))
         navigate('/login')

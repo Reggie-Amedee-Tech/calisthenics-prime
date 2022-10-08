@@ -89,6 +89,14 @@ header {
     padding: 3px;
     align-self: center;
   }
+
+  .User {
+    display: none;
+  }
+
+  .Logo {
+    font-size: 0.6rem;
+  }
   
 }
 

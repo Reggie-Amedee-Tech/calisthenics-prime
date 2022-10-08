@@ -1,7 +1,6 @@
 * {
     margin: 0px;
     padding: 0px;
-    
 }
 
 .Div {
@@ -61,6 +60,7 @@
     background: rgb(2,0,36);
     background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(141,213,235,1) 100%); 
     width: 5rem;
+    font-size: 1rem;
 }
 
 .Bottom{
@@ -98,6 +98,8 @@
     background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(141,213,235,1) 100%); 
     color: white;
     width: 5rem;
+    font-size: 1rem;
+    padding: 10px;
 }
 
 .BottomContainerBottom {
@@ -170,15 +172,29 @@
 @media screen and (max-width: 635px) {
     .BottomContainerTop {
         flex-direction: column;
-        
+        justify-content: space-around;
+        height: 20%;
     }
     .BottomContainerBottom {
         flex-direction: column;
         margin-top: 10px;
+        
+    }
+
+    .SCSP{
+        text-align: center;
     }
     
     .SocialMediaContainer {
-        display: none;
+        align-items: center;
+    }
+
+    .Top {
+        height: 30%;
+    }
+    
+    .BCTH1{
+        font-size: 1.8rem;
     }
 }
 

@@ -66,5 +66,12 @@
     background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(84,84,208,1) 100%, rgba(0,212,255,1) 100%);
     color: white;
     margin-bottom: 10px;
+    font-size: 1rem;
+    padding: 10px;
 }
 
+@media screen and (max-width: 700px) {
+    .Container {
+        width: 70%;
+    }
+}

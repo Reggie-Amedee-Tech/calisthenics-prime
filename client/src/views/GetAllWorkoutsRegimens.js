@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { getWorkoutRegimens } from '../features/GetWorkoutRegimens.js';
 import classes from '../assets/getAllWorkoutRegimens.module.css'
+import UnauthorizedPage from '../components/UnauthorizedPage.js';
 
 const GetAllWorkoutsRegimens = () => {
   const [loaded, setLoaded] = useState(false)
@@ -62,7 +63,7 @@ const GetAllWorkoutsRegimens = () => {
           </tbody>
         </table>
       </div>
-        : <h1>Unauthorized :(</h1>}
+        : <UnauthorizedPage />}
     </div>
   )
 }
