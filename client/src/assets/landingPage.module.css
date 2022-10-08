@@ -43,7 +43,7 @@
     font-size: 1rem;
     line-height: 30px;
     color: white;
-    width: 40em;
+    padding: 5px;
 }
 
 .RightPic {
@@ -108,7 +108,6 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .SocialMediaContainer {
@@ -159,5 +158,27 @@
 }
 
 
+@media screen and (max-width: 575px) {
+    .Right {
+        display: none;
+    }
+    .Left {
+        text-align: center;
+    }
+}
 
+@media screen and (max-width: 635px) {
+    .BottomContainerTop {
+        flex-direction: column;
+        
+    }
+    .BottomContainerBottom {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    
+    .SocialMediaContainer {
+        display: none;
+    }
+}
 
