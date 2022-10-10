@@ -14,11 +14,15 @@ const CreateRegimenForm = () => {
     const [errors, setErrors] = useState([])
 
     const {userToken, userId} = useSelector((state) => state.user)
+    console.log(userToken)
 
+    
 
-    const instance = axios.create({
-        withCredentials: true
-    });
+    const config = {
+        headers: { Authorization: `Bearer ${userToken}` }
+    };
+
+    console.log(config.headers.Authorization)
 
     const navigate = useNavigate()
 
@@ -30,7 +34,7 @@ const CreateRegimenForm = () => {
 
     const createWorkout = (e) => {
         e.preventDefault();
-        instance.post('http://localhost:5003/api/regimen/exerciseQueueCreate', {
+        axios.post('http://localhost:5003/api/regimen/exerciseQueueCreate', config, {withCredentials: true}, {
             workoutRegimen,
             workouts
         })
