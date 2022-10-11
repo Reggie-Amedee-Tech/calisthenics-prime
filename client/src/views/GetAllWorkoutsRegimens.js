@@ -6,19 +6,17 @@ import classes from '../assets/getAllWorkoutRegimens.module.css'
 import UnauthorizedPage from '../components/UnauthorizedPage.js';
 
 const GetAllWorkoutsRegimens = () => {
-  const [loaded, setLoaded] = useState(false)
 
   const workoutRegimen = useSelector(state => state.getWorkoutRegimens)
   const { userToken } = useSelector((state) => state.user)
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    dispatch(getWorkoutRegimens())
-  }, [])
+  console.log(workoutRegimen)
 
   useEffect(() => {
-    setLoaded(true)
-  }, [loaded])
+    dispatch(getWorkoutRegimens())
+    
+  }, [userToken])
 
   return (
 
@@ -27,7 +25,7 @@ const GetAllWorkoutsRegimens = () => {
         <table className={classes.Table}>
           <thead>
             {
-              loaded === false ? <tr className={classes.TableRow}>
+              workoutRegimen.loading === true ? <tr className={classes.TableRow}>
                 <th className={classes.TableHead}>Loading...</th>
               </tr> : <tr className={classes.TableRow}>
                 <th className={classes.TableHead}>Regimen Name</th>
@@ -39,7 +37,7 @@ const GetAllWorkoutsRegimens = () => {
             }
           </thead>
           <tbody>
-            {workoutRegimen.workoutRegimens.map(workout => {
+            {workoutRegimen.workoutRegimens === undefined ? <h1>Loading</h1> : workoutRegimen.workoutRegimens.map(workout => {
               let arr = []
               let date = workout.createdAt.slice(0, 10)
               let year = workout.createdAt.slice(0, 4)

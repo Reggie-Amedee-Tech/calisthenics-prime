@@ -12,6 +12,7 @@ import { Routes, Route } from 'react-router-dom'
 import classes from './App.module.css';
 import { getUserDetails } from './features/user/userAction'
 import {logout} from './features/user/userSlice'
+import axios from 'axios';
 
 function App() {
 
@@ -28,6 +29,16 @@ function App() {
     
   }, [])
 
+  const logoutUser = (e) => {
+    e.preventDefault();
+    axios.post('http://localhost:5003/logout', {}, {withCredentials: true})
+    .then(res => {
+      console.log('You have logged out!')
+      dispatch(logout())
+      navigate('')
+    })
+    .catch(err => console.log(err))
+  }
 
   return (
     <div>
@@ -43,10 +54,7 @@ function App() {
             <h1 className={classes.Workouts} onClick={() => {
               navigate('allWorkoutRegimens')
             }}>Workouts</h1>
-            <h1 className={classes.Workouts} onClick={() => {
-              dispatch(logout())
-              navigate('')
-            }}>Logout</h1>
+            <h1 className={classes.Workouts} onClick={logoutUser}>Logout</h1>
           </div>
           <div className={classes.User}><h5>{userInfo ? `Logged in as ${userInfo.email}` : "You're not logged in"}</h5></div>
         </div>

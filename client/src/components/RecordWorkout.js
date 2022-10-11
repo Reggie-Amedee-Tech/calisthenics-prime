@@ -30,7 +30,7 @@ const RecordWorkout = () => {
     }
 
     const saveWorkout = () => {
-        instance.put(`http://localhost:3000/api/regimen/${id}/exerciseQueueUpdate`, {
+        instance.put(`http://localhost:5003/api/regimen/${id}/exerciseQueueUpdate`, {
             workouts
         })
             .then(res => console.log(res))

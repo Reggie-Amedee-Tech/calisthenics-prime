@@ -32,6 +32,7 @@ const userSlice = createSlice({
             state.userToken = null
             state.error = null
             localStorage.removeItem('email')
+            localStorage.removeItem('id')
         }
     },
     extraReducers: {

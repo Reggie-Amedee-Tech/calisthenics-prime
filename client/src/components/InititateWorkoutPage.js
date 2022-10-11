@@ -47,9 +47,9 @@ const InititateWorkoutPage = (props) => {
     }
 
     const recordTime = () => {
-        instance.put(`http://localhost:3000/api/regimen/${id}/exerciseQueueUpdate`, {
+        instance.put(`http://localhost:5003/api/regimen/${id}/exerciseQueueUpdate`, {
             completionTime
-        })
+        }, {withCredentials: true})
             .then(res => console.log(res))
             .catch(err => console.log(err))
     }

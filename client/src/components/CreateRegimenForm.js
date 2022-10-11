@@ -9,20 +9,16 @@ import { useSelector } from 'react-redux';
 const CreateRegimenForm = () => {
     const [workoutRegimen, setWorkoutRegimen] = useState('');
     const [workouts, setWorkouts] = useState([])
-    const [createdBy, setCreatedBy] = useState('')
     const [workout, setWorkout] = useState([])
     const [errors, setErrors] = useState([])
+    
 
     const {userToken, userId} = useSelector((state) => state.user)
     console.log(userToken)
 
-    
-
-    const config = {
-        headers: { Authorization: `Bearer ${userToken}` }
-    };
-
-    console.log(config.headers.Authorization)
+    const headers = {
+        Authorization: `Bearer ${userToken}`
+    }
 
     const navigate = useNavigate()
 
@@ -34,21 +30,14 @@ const CreateRegimenForm = () => {
 
     const createWorkout = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5003/api/regimen/exerciseQueueCreate', config, {withCredentials: true}, {
+        axios.post('http://localhost:5003/api/regimen/exerciseQueueCreate', {
             workoutRegimen,
             workouts
-        })
+        }, {withCredentials: true})
             .then(res => {
                 setWorkout([res.data])
             })
-            .catch(err => {
-                const errorResponse = err.response.data.errors
-                const errArr = []
-                for (const key of Object.keys(errorResponse)) {
-                    errArr.push(errorResponse[key].message)
-                }
-                setErrors(errArr)
-            })
+            .catch(err => console.log(err))
     }
 
     useEffect(() => {
@@ -57,7 +46,7 @@ const CreateRegimenForm = () => {
         } else {
             navigate(`/${id}`)
         }
-    }, [workout])
+    }, [workout, userToken])
 
     return (
         <div className={classes.Div}>

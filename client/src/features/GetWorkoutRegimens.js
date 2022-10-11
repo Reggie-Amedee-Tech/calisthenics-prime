@@ -10,12 +10,10 @@ const initialState = {
     userInfo: null
 }
 
-
-
 export const getWorkoutRegimens = createAsyncThunk('workoutRegimen/getWorkoutRegimens', async () => {
-    const res = await axios.get('http://localhost:3000/api/regimen/workoutRegimens', {withCredentials: true})
+    const res = await axios.get('http://localhost:5003/api/regimen/workoutRegimens', {withCredentials: true})
     .then(res => {
-        return res.data.filter(user => user.createdBy === userId)
+        return res.data.map(user => user)
     })
     .catch(err => {
         console.log(err.message)
@@ -29,6 +27,7 @@ const workoutRegimenSliceReducer = createSlice({
     extraReducers: builder =>  {
         builder.addCase(getWorkoutRegimens.pending, state => {
             state.loading = true
+            state.error = null
         })
         builder.addCase(getWorkoutRegimens.fulfilled, (state, action) => {
             state.loading = false
@@ -36,7 +35,7 @@ const workoutRegimenSliceReducer = createSlice({
         })
         builder.addCase(getWorkoutRegimens.rejected, (state, action) => {
             state.loading = false
-            state.workoutRegimens = []
+            state.workoutRegimens = null
             state.error = action.error.message
         })
     }

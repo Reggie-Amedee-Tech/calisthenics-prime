@@ -11,7 +11,7 @@ const DetailedRegimenPage = () => {
     const id = location.pathname.slice(20)
 
     const deleteRegimen = (id) => {
-        axios.delete(`http://localhost:3000/api/regimen/${id}/deleteExercise`)
+        axios.delete(`http://localhost:5003/api/regimen/${id}/deleteExercise`)
         .then(res => {
             console.log(res)
 
@@ -20,7 +20,7 @@ const DetailedRegimenPage = () => {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/api/regimen/workoutRegimens/${id}`)
+        axios.get(`http://localhost:5003/api/regimen/workoutRegimens/${id}`)
             .then(res => {
                 setWorkout([res.data])
                 setLoaded(true)
@@ -31,6 +31,8 @@ const DetailedRegimenPage = () => {
                 setLoaded(false)
             })
     }, [])
+
+    
 
     return (
         <div className={classes.Div}>

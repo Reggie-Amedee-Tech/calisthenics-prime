@@ -12,7 +12,7 @@ module.exports.createExersizeQueue = (request,response) => {
         createdBy: userId
     })
     .then(res => response.json(res))
-    .catch(err => response.status(400).json(err))
+    .catch(err => response.json(err))
 }
 
 module.exports.getRegimens = (request,response) => {
