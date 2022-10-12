@@ -11,15 +11,11 @@ const GetAllWorkoutsRegimens = () => {
   const { userToken } = useSelector((state) => state.user)
   const dispatch = useDispatch()
 
-  console.log(workoutRegimen)
-
   useEffect(() => {
     dispatch(getWorkoutRegimens())
-    
   }, [userToken])
 
   return (
-
     <div className={classes.Div}>
       {userToken ? <div className={classes.Container}>
         <table className={classes.Table}>
@@ -41,15 +37,12 @@ const GetAllWorkoutsRegimens = () => {
               let arr = []
               let date = workout.createdAt.slice(0, 10)
               let year = workout.createdAt.slice(0, 4)
-
               for (let i = 0; i < date.length; i++) {
                 if (i > 4) {
                   arr.push(date[i])
                 }
               }
-
               const workoutDate = arr.toString().replace(/,/g, "") + "-" + year
-
               return <tr key={workout._id} className={classes.TableBottomRow}>
                 <td className={classes.TableData}>{workout.workoutRegimen}</td>
                 <td className={classes.TableData}>{workout.workouts.length}</td>

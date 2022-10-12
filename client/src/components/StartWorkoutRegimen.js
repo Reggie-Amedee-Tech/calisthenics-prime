@@ -4,11 +4,8 @@ import axios from 'axios'
 
 const StartWorkoutRegimen = () => {
     const [detailedWorkout, setDetailedWorkout] = useState([])
-
     const location = useLocation()
     const id = location.pathname.slice(20)
-
-    
 
     useEffect(() => {
         axios.get(`http://localhost:5003/api/regimen/workoutRegimens/${id}`, {withCredentials: true})

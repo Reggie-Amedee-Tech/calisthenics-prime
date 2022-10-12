@@ -11,10 +11,7 @@ const CreateRegimenForm = () => {
     const [workouts, setWorkouts] = useState([])
     const [workout, setWorkout] = useState([])
     const [errors, setErrors] = useState([])
-    
-
     const {userToken, userId} = useSelector((state) => state.user)
-    console.log(userToken)
 
     const headers = {
         Authorization: `Bearer ${userToken}`
