@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import CreateRegimenPage from './views/CreateRegimenPage';
 import GetAllWorkoutsRegimens from './views/GetAllWorkoutsRegimens';
 import DetailedRegimenPage from './views/DetailedRegimenPage';
@@ -11,33 +11,35 @@ import { useNavigate } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom'
 import classes from './App.module.css';
 import { getUserDetails } from './features/user/userAction'
-import {logout} from './features/user/userSlice'
+import { logout } from './features/user/userSlice'
 import axios from 'axios';
 
 function App() {
-
+  
   const navigate = useNavigate()
 
-  const { userInfo, userToken } = useSelector((state) => state.user)
+  const {userToken, email } = useSelector((state) => state.user)
   const dispatch = useDispatch()
 
   useEffect(() => {
-    if (!userToken ) {
+    if (userToken) {
       return
-    } 
-      dispatch(getUserDetails())
-    
+    }
+    dispatch(getUserDetails())
+
   }, [])
+
+  
 
   const logoutUser = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5003/logout', {}, {withCredentials: true})
-    .then(res => {
-      console.log('You have logged out!')
-      dispatch(logout())
-      navigate('')
-    })
-    .catch(err => console.log(err))
+    axios.post('http://localhost:5003/logout', {}, { withCredentials: true })
+      .then(res => {
+        console.log('You have logged out!')
+        dispatch(logout())
+        navigate('')
+      })
+      .catch(err => console.log(err))
   }
 
   return (
@@ -56,7 +58,7 @@ function App() {
             }}>Workouts</h1>
             <h1 className={classes.Workouts} onClick={logoutUser}>Logout</h1>
           </div>
-          <div className={classes.User}><h5>{userInfo ? `Logged in as ${userInfo.email}` : "You're not logged in"}</h5></div>
+          <div className={classes.User}><h5>{userToken ? `Logged in as ${email}` : "You're not logged in"}</h5></div>
         </div>
       </header>
       <Routes>

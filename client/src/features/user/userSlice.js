@@ -17,6 +17,7 @@ const initialState = {
     userInfo: null,
     userToken,
     userId,
+    email,
     error: null,
     success: false,
 }
@@ -59,12 +60,12 @@ const userSlice = createSlice({
             state.success = true
             state.userToken = payload.token
             state.userId = payload.id
+            state.userEmail = payload.email
         },
         [loginUser.rejected]: (state, { payload }) => {
             state.loading = false
             state.error = payload
         },
-
         [getUserDetails.pending]: (state) => {
             state.loading = true
         },

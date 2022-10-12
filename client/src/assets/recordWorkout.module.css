@@ -95,6 +95,12 @@
     flex-direction: row;
 }
 
+.WorkoutFeedback, h4 {
+    text-align: center;
+    position: relative;
+    top: 20px;
+}
+
 .RightTopButton {
     display: flex;
     flex-direction: row;
@@ -259,6 +265,4 @@
         width: 100px;
         font-size: 1rem;
     }
-
-    
 }

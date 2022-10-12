@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import InititateWorkoutPage from './InititateWorkoutPage'
 import classes from '../assets/recordWorkout.module.css'
 import { useLocation, useNavigate } from 'react-router-dom'
@@ -8,6 +8,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 const RecordWorkout = () => {
     const [workoutName, setWorkoutName] = useState('')
     const [reps, setReps] = useState(0)
+    const [counter, setCounter] = useState(0)
     const [done, setDone] = useState(false)
     const [workouts, setWorkouts] = useState([])
     const [initiateWorkout, setInitiateWorkout] = useState(false)
@@ -18,6 +19,10 @@ const RecordWorkout = () => {
     const instance = axios.create({
         withCredentials: true
     });
+
+    useEffect(() => {
+        
+    }, [counter])
 
     const addWorkout = object => {
         setWorkouts([
@@ -67,7 +72,11 @@ const RecordWorkout = () => {
                                                 workoutName: workoutName,
                                                 reps: reps
                                             })
+                                            setCounter(prev => prev + 1)
                                         }} className={classes.RightButton}>Add Exercise</button>
+                                    </div>
+                                    <div className={classes.WorkoutFeedback}>
+                                        {counter > 0 ? <h4>Please enter add another exercise, or submit your workout!</h4> : <h4>Please add an exercise performed!</h4>}
                                     </div>
                                 </div>
                                 <button onClick={() => {
