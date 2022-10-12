@@ -119,7 +119,15 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     
+}
+
+.SocialMediaIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 200px;
 }
 
 .FounderBox {
