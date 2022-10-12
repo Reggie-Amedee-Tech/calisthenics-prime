@@ -114,14 +114,16 @@
 }
 
 .SocialMediaContainer {
-    height: 15rem;
+    height: 17rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    
 }
 
 .FounderBox {
-    height: 15rem;
+    height: 13rem;
 }
 
 .PictureFrame {
@@ -132,16 +134,11 @@
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    border: 1px solid pink;
+    
 }
 
 .FounderInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 40px;
-    padding: 5px;
-    justify-content: space-between;
+    text-align: center;
     color: white;
 }
 

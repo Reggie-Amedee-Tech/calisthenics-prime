@@ -35,7 +35,7 @@ const LandingPage = () => {
             <div className={classes.BottomContainerBottom}>
               <div className={classes.SocialMediaContainer}>
                 <h4 className={classes.SCSH1}>Strength-Track</h4>
-                <p className={classes.SCSP}>Strength Track is a fitness platform designed to track your calistehnics jounrey through data logging your overall progression. Hit those target rep-ranges by evaluating what you need to work on through our documenting system.</p>
+                <p className={classes.SCSP}>Strength Track is a fitness platform designed to track your calistehnics journey through logging your overall progression. Hit those target rep-ranges by evaluating what you need to work on through our documenting system.</p>
                 <div className={classes.SocialMediaIcons}>
                 <img src={IgIcon} alt="instagram icon" className={classes.Icon}/>
                 <img src={TwIcon} alt="twitter icon" className={classes.Icon}/>
@@ -47,8 +47,8 @@ const LandingPage = () => {
                   <img src={reggie} alt="founder" className={classes.FImg}/>
                   </div>
                   <div className={classes.FounderInfo}>
-                  <h4>Founder</h4>
-                  <h5>Reginald Jean Amedee</h5>
+                  <p>Founder</p>
+                  <p>Reginald Jean Amedee</p>
                   </div>
                 </div>
             </div>
