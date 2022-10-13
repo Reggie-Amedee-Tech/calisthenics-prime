@@ -6,8 +6,7 @@
     "npm": "8.5.4"
   },
   "description": "",
-  "main": "index.js",
-  "proxy": "https://shielded-citadel-69871.herokuapp.com/",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --watch server exec node server/server.js",
