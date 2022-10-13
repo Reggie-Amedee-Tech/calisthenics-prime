@@ -18,7 +18,7 @@ const LandingPage = () => {
           <div className={classes.TopContainer}>
             <div className={classes.Left}>
               <h1 className={classes.LeftH1}>Strength-Track</h1>
-              <p className={classes.LeftP}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              <p className={classes.LeftP}>Strength Track is a fitness platform designed to track your calistehnics journey through logging your overall progression. Hit those target rep-ranges by evaluating what you need to work on through our documenting system.</p>
               <button onClick={() => navigate('register')} className={classes.LButton}>Register</button>
             </div>
             <div className={classes.Right}>
@@ -35,7 +35,7 @@ const LandingPage = () => {
             <div className={classes.BottomContainerBottom}>
               <div className={classes.SocialMediaContainer}>
                 <h4 className={classes.SCSH1}>Strength-Track</h4>
-                <p className={classes.SCSP}>Strength Track is a fitness platform designed to track your calistehnics journey through logging your overall progression. Hit those target rep-ranges by evaluating what you need to work on through our documenting system.</p>
+                <p className={classes.SCSP}>In starting my calistehnics journey, I wanted to document my progress in a way that was intuitive and easy to reference. I developed this app with that in mind. Please follow us on social media!</p>
                 <div className={classes.SocialMediaIcons}>
                 <img src={IgIcon} alt="instagram icon" className={classes.Icon}/>
                 <img src={TwIcon} alt="twitter icon" className={classes.Icon}/>
