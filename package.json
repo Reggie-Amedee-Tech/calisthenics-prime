@@ -32,6 +32,7 @@
     "express": "^4.18.1",
     "mongoose": "^6.6.1",
     "nodemon": "^2.0.20",
-    "react-cookie": "^4.1.1"
+    "react-cookie": "^4.1.1",
+    "cookie-parser": "^1.4.6"
   }
 }
