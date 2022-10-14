@@ -100,3 +100,10 @@ header {
   
 }
 
+@media screen and (max-width: 486px) {
+.Logo {
+  display: none;
+}
+ 
+}
+

@@ -39,3 +39,14 @@
     font-size: 2rem;
     padding: 10px;
 }
+
+@media screen and (max-width: 486px) {
+    .UIH1 {
+        font-size: 5rem;
+    }
+
+    .UIH3 {
+        font-size: 3rem;
+    }
+    
+}

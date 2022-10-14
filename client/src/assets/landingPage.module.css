@@ -6,6 +6,9 @@
 .Div {
     width: 100%;
     height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
 }
 
 .Container{
@@ -214,4 +217,47 @@
         font-size: 1.8rem;
     }
 }
+
+@media screen and (max-width: 486px) {
+    .Left{
+        height: 40vh;
+    }
+
+    .LeftH1{
+        font-size: 1.5rem;
+    }
+
+    .LeftP {
+        font-size: 0.7rem;
+    }
+
+    .LButton {
+        margin-bottom: 10px;
+    }
+
+    .BottomContainerTop {
+        height: 15vh;
+        
+    }
+
+    .BCTH1 {
+        font-size: 1.3rem;
+    }
+
+    .SCSP{
+        font-size: 0.9rem;
+        line-height: 30px;
+    }
+
+    .SCSH1 {
+        font-size: 1.3rem;
+    }
+
+    .PictureFrame{
+        height: 70%;
+        overflow: hidden;
+    }
+}
+
+
 
