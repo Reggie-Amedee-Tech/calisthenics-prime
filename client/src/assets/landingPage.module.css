@@ -259,5 +259,23 @@
     }
 }
 
+@media (orientation: landscape) {
+    .Top {
+        height: 70%;
+    }
+
+    .SocialMediaContainer {
+        margin-bottom: 20px;
+    }
+    
+    .Bottom {
+        height: 105vh;
+    }
+
+    .BottomContainerBottom{
+        height: 100%;
+    }
+}
+
 
 
