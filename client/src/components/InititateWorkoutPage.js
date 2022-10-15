@@ -48,7 +48,7 @@ const InititateWorkoutPage = (props) => {
 
     const recordTime = () => {
         console.log(id)
-        instance.put(`https://shielded-citadel-69871.herokuapp.com/${id}/exerciseQueueUpdate`, {
+        instance.put(`https://shielded-citadel-69871.herokuapp.com/api/regimen/${id}/exerciseQueueUpdate`, {
             completionTime
         }, {withCredentials: true})
             .then(res => console.log(res))
