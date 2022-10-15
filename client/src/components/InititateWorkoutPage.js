@@ -14,7 +14,6 @@ const InititateWorkoutPage = (props) => {
     const [timeSaved, setTimeSaved] = useState(false)
     const location = useLocation()
     const id = location.pathname.slice(1)
-    console.log(id)
 
     const instance = axios.create({
         withCredentials: true
