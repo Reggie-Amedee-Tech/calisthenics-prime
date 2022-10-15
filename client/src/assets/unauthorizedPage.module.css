@@ -50,3 +50,13 @@
     }
     
 }
+
+@media (orientation: landscape) {
+    .UIH1{
+        font-size: 4rem;
+    }
+    
+    .UIH3{
+        font-size: 2rem;
+    }
+}
