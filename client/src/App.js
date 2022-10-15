@@ -33,7 +33,7 @@ function App() {
 
   const logoutUser = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5003/logout', {}, { withCredentials: true })
+    axios.post('https://shielded-citadel-69871.herokuapp.com/logout', {}, { withCredentials: true })
       .then(res => {
         console.log('You have logged out!')
         dispatch(logout())

@@ -27,7 +27,7 @@ const CreateRegimenForm = () => {
 
     const createWorkout = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5003/api/regimen/exerciseQueueCreate', {
+        axios.post('https://shielded-citadel-69871.herokuapp.com/api/regimen/exerciseQueueCreate', {
             workoutRegimen,
             workouts
         }, {withCredentials: true})

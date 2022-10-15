@@ -13,12 +13,15 @@ const RecordWorkout = () => {
     const [workouts, setWorkouts] = useState([])
     const [initiateWorkout, setInitiateWorkout] = useState(false)
     const location = useLocation()
+    console.log(location)
     const id = location.pathname.slice(1)
     const navigate = useNavigate()
 
     const instance = axios.create({
         withCredentials: true
     });
+
+
 
     useEffect(() => {
         
@@ -35,7 +38,7 @@ const RecordWorkout = () => {
     }
 
     const saveWorkout = () => {
-        instance.put(`http://localhost:5003/api/regimen/${id}/exerciseQueueUpdate`, {
+        instance.put(`https://shielded-citadel-69871.herokuapp.com/api/regimen/${id}/exerciseQueueUpdate`, {
             workouts
         })
             .then(res => console.log(res))

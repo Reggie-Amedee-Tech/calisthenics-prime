@@ -8,7 +8,7 @@ export const registerUser = createAsyncThunk('user/register', async ({ userName,
                 'Content-Type': 'application/json',
             }
         }
-        await axios.post('http://localhost:5003/register', {
+        await axios.post('https://shielded-citadel-69871.herokuapp.com/register', {
             userName,
             email,
             password
