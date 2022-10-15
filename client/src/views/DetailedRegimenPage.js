@@ -8,7 +8,7 @@ const DetailedRegimenPage = () => {
     const [workout, setWorkout] = useState([])
     const [loaded, setLoaded] = useState(false)
     const navigate = useNavigate()
-    const id = location.pathname.slice(20)
+    const id = location.pathname.slice(21)
 
     const deleteRegimen = (id) => {
         axios.delete(`https://shielded-citadel-69871.herokuapp.com/api/regimen/${id}/deleteExercise`)
