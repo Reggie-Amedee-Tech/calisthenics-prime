@@ -26,7 +26,7 @@ export const registerUser = createAsyncThunk('user/register', async ({ userName,
 export const loginUser = createAsyncThunk('user/login', async ({ email, password }, { rejectWithValue }) => {
     try {
         
-        const { data } = await axios.post('http://localhost:5003/login', {
+        const { data } = await axios.post('https://shielded-citadel-69871.herokuapp.com/login', {
             email,
             password
         }, {withCredentials: true } )
