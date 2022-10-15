@@ -11,7 +11,7 @@ const initialState = {
 }
 
 export const getWorkoutRegimens = createAsyncThunk('workoutRegimen/getWorkoutRegimens', async () => {
-    const res = await axios.get('http://localhost:5003/api/regimen/workoutRegimens', {withCredentials: true})
+    const res = await axios.get('https://shielded-citadel-69871.herokuapp.com/api/regimen/workoutRegimens', {withCredentials: true})
     .then(res => {
         return res.data.map(user => user)
     })
