@@ -146,7 +146,6 @@
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    
 }
 
 .FounderInfo {
@@ -265,7 +264,7 @@
     }
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) {
     .Top {
         height: 70%;
     }
