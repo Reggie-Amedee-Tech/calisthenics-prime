@@ -139,7 +139,7 @@
 
 .PictureFrame {
     height: 100%;
-    width: 35vw;
+    width: 25vw;
 }
 
 .FImg {
@@ -191,6 +191,11 @@
 }
 
 @media screen and (max-width: 675px) {
+
+    .PictureFrame{
+        width: 50vw;
+    }
+
     .BottomContainerTop {
         flex-direction: column;
         justify-content: space-around;
@@ -275,6 +280,10 @@
 
     .BottomContainerBottom{
         height: 100%;
+    }
+
+    .PictureFrame {
+        width: 35vw;
     }
 }
 
