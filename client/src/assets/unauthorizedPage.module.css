@@ -51,7 +51,7 @@
     
 }
 
-@media (orientation: landscape) {
+@media screen and (orientation: landscape) and (min-width: 487px) and (max-width: 1000px) {
     .UIH1{
         font-size: 4rem;
     }

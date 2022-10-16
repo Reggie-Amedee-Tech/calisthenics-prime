@@ -264,7 +264,7 @@
     }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-width: 600px) {
     .Top {
         height: 70%;
     }
@@ -274,15 +274,11 @@
     }
     
     .Bottom {
-        height: 105vh;
+        height: 110vh;
     }
 
     .BottomContainerBottom{
         height: 100%;
-    }
-
-    .PictureFrame {
-        width: 35vw;
     }
 }
 
