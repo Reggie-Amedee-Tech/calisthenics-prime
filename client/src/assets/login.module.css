@@ -75,3 +75,9 @@
         width: 70%;
     }
 }
+
+@media screen and (orientation: landscape) and (max-height: 450px) {
+    .Container{
+        width: 20%;
+    }
+}

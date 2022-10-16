@@ -73,3 +73,22 @@
         width: 70%;
     }
 }
+
+@media screen and (orientation: landscape) and (max-height: 450px) {
+
+    .SignUpText{
+        font-size: 0.9rem;
+    }
+
+    .Container{
+        width: 20%
+    }
+
+    .FormInput{
+        font-size: 0.3rem;
+    }
+
+    .Label {
+        font-size: 0.9rem;
+    }
+}
