@@ -39,7 +39,7 @@ header {
 }
 
 .Workouts {
-  font-size: 1vw;
+  font-size: 1rem;
   margin-left: 40px;
   border-radius: 7.5%;
   background: rgb(2,0,36);
@@ -51,7 +51,7 @@ header {
 }
 
 .StartRegimen {
-  font-size: 1vw;
+  font-size: 1rem;
   border-radius: 7.5%;
   background: rgb(2,0,36);
   background: linear-gradient(163deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 0%, rgba(141,213,235,1) 100%); 
