@@ -89,6 +89,10 @@
     }
 
     .Label {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
+    }
+
+    .Button{
+        font-size: 0.5rem;
     }
 }

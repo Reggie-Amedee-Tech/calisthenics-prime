@@ -221,6 +221,10 @@
     .BCTH1{
         font-size: 1.8rem;
     }
+
+    .PictureFrame{
+        height: 70vh;
+    }
 }
 
 @media screen and (max-width: 486px) {
@@ -261,6 +265,10 @@
     .PictureFrame{
         height: 70%;
         overflow: hidden;
+    }
+
+    .BottomContainerBottom {
+        height: 70vh;
     }
 }
 
