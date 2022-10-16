@@ -74,10 +74,10 @@
     }
 }
 
-@media screen and (orientation: landscape) and (max-height: 450px) {
+@media screen and (orientation: landscape) and (max-height: 570px) {
 
     .SignUpText{
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 
     .Container{
@@ -85,10 +85,10 @@
     }
 
     .FormInput{
-        font-size: 0.3rem;
+        font-size: 0.2rem;
     }
 
     .Label {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
     }
 }
