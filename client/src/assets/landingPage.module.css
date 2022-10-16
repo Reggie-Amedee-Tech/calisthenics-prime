@@ -282,5 +282,25 @@
     }
 }
 
+@media screen and (orientation: landscape) and (max-height: 450px) {
+
+    .Top {
+        height: 100vh;
+    }
+
+    .Bottom {
+        height: 100vh;
+    }
+
+    .FounderInfo{
+        border: 1px solid black;
+        display: none;
+    }
+
+    .SocialMediaContainer{
+        height: 14rem;
+    }
+}
+
 
 
