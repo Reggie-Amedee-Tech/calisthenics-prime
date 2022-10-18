@@ -60,7 +60,7 @@ const userSlice = createSlice({
             state.success = true
             state.userToken = payload.token
             state.userId = payload.id
-            state.userEmail = payload.email
+            state.email = payload.email
         },
         [loginUser.rejected]: (state, { payload }) => {
             state.loading = false

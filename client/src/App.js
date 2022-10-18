@@ -18,15 +18,15 @@ function App() {
   
   const navigate = useNavigate()
 
-  const {userToken, email } = useSelector((state) => state.user)
+  const {userToken, email, loading} = useSelector((state) => state.user)
   const dispatch = useDispatch()
 
   useEffect(() => {
     if (userToken) {
-      return
-    }
-    dispatch(getUserDetails())
-
+      dispatch(getUserDetails())
+    } 
+    return
+    
   }, [])
 
   
@@ -58,7 +58,7 @@ function App() {
             }}>Workouts</h1>
             <h1 className={classes.Workouts} onClick={logoutUser}>Logout</h1>
           </div>
-          <div className={classes.User}><h5>{userToken ? `Logged in as ${email}` : "You're not logged in"}</h5></div>
+          <div className={classes.User}><h5>{loading === true ? <h5>Loading...</h5> : userToken ? `Logged in as ${email}` : "You're not logged in"}</h5></div>
         </div>
       </header>
       <Routes>
