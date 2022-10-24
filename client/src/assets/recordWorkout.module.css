@@ -266,3 +266,17 @@
         font-size: 1rem;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .RightTopInputs {
+        flex-direction: column;
+        height: 200px;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .Inputs{
+        display: flex;
+        flex-direction: column;
+    }
+}

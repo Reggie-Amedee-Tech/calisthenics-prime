@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {useEffect} from 'react'
 import CreateRegimenPage from './views/CreateRegimenPage';
 import GetAllWorkoutsRegimens from './views/GetAllWorkoutsRegimens';
 import DetailedRegimenPage from './views/DetailedRegimenPage';
@@ -17,7 +17,6 @@ import axios from 'axios';
 function App() {
   
   const navigate = useNavigate()
-
   const {userToken, email, loading} = useSelector((state) => state.user)
   const dispatch = useDispatch()
 
@@ -35,7 +34,7 @@ function App() {
     e.preventDefault();
     axios.post('https://shielded-citadel-69871.herokuapp.com/logout', {}, { withCredentials: true })
       .then(res => {
-        console.log('You have logged out!')
+        console.log(res, 'You have logged out!')
         dispatch(logout())
         navigate('')
       })

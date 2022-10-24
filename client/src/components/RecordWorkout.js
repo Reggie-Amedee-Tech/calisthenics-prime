@@ -61,11 +61,11 @@ const RecordWorkout = () => {
                                 <div className={classes.RightTop}>
                                     <div className={classes.RightTopInputs}>
                                         <div>
-                                            <label>Workout Name</label>
+                                            <label style={{"textAlign" : "center"}}>Workout Name</label>
                                             <input type='text' onChange={e => setWorkoutName(e.target.value)} value={workoutName} className={classes.RightInput} />
                                         </div>
                                         <div>
-                                            <label>Reps</label>
+                                            <label style={{"textAlign" : "center"}}>Reps</label>
                                             <input type="number" onChange={e => setReps(e.target.value)} className={classes.RightInput2} value={reps} />
                                         </div>
                                     </div>
