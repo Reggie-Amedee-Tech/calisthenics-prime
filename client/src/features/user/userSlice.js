@@ -1,4 +1,3 @@
-
 import { createSlice } from '@reduxjs/toolkit'
 import { getUserDetails, registerUser, loginUser } from './userAction'
 
