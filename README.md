@@ -29,6 +29,7 @@ Utilized a MERN stack to build app
 Other Technologies Used
 * Axios
 * Heroku
+* Redux Toolkit
 
 ## Planning Process
 * Started with back-end application then worked on the front-end
