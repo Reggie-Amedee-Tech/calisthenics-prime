@@ -1,6 +1,4 @@
-# calisthenics-prime
-
-# Design Doc
+# Design Doc - Calisthenics Prime
 
 Calisthenics App
 An app that tracks your calisthenics journey 
