@@ -27,6 +27,7 @@ Utilized a MERN stack to build app
 * Node.js
 
 Other Technologies Used
+* Redux Toolkit
 * Axios
 * Heroku
 * Redux Toolkit
