@@ -1,15 +1,29 @@
-# Design Doc - Calisthenics Prime
-
-## Calisthenics App
-An app that tracks your calisthenics journey 
-Supercharge your workouts with data driven tracking while documenting your journey with calisthenics. Users will be able to set weekly goals for specific workouts. You can adjust your workout based on the intensity that you want to have. Compare your journey by a given time frame with the goal that you previously set for yourself.
+# Calisthenics Prime
+An app that tracks your calisthenics journey ! Supercharge your workouts with data driven tracking while documenting your journey with calisthenics. Users will be able to set weekly goals for specific workouts. You can adjust your workout based on the intensity that you want to have. Compare your journey by a given time frame with the goal that you previously set for yourself.
 
 ## Features
 * User Registration
-* Have a stop-clock 
 * Create Circuit Workouts
 * Log workouts 
 * View them in a dashboard
+
+### User Cannot Access App Without Token
+<img src="src/pictures/pic1.png" max-width="100%">
+
+### User Registration
+<img src="src/pictures/pic4.png" max-width="100%">
+<img src="src/pictures/pic3.png" max-width="100%">
+<img src="src/pictures/pic2.png" max-width="100%">
+
+### Create Circuit Workouts
+<img src="src/pictures/pic5.png" max-width="100%">
+
+### Log Workouts
+<img src="src/pictures/pic6.png" max-width="100%">
+
+### View Them In Dashboard
+<img src="src/pictures/pic7.png" max-width="100%">
+<img src="src/pictures/pic8.png" max-width="100%">
 
 [Live Web App](https://shielded-citadel-69871.herokuapp.com/)
 
