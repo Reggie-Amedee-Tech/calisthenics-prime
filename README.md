@@ -8,7 +8,7 @@ An app that tracks your calisthenics journey ! Supercharge your workouts with da
 * View them in a dashboard
 
 ### User Cannot Access App Without Token
-<img src="src/pictures/pic1.png" max-width="100%">
+<img src="client/src/pictures/pic1.png" max-width="100%">
 
 ### User Registration
 <img src="client/src/pictures/pic4.png" max-width="100%">
