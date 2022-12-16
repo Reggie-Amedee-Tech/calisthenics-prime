@@ -11,19 +11,19 @@ An app that tracks your calisthenics journey ! Supercharge your workouts with da
 <img src="src/pictures/pic1.png" max-width="100%">
 
 ### User Registration
-<img src="src/pictures/pic4.png" max-width="100%">
-<img src="src/pictures/pic3.png" max-width="100%">
-<img src="src/pictures/pic2.png" max-width="100%">
+<img src="client/src/pictures/pic4.png" max-width="100%">
+<img src="client/src/pictures/pic3.png" max-width="100%">
+<img src="client/src/pictures/pic2.png" max-width="100%">
 
 ### Create Circuit Workouts
-<img src="src/pictures/pic5.png" max-width="100%">
+<img src="client/src/pictures/pic5.png" max-width="100%">
 
 ### Log Workouts
-<img src="src/pictures/pic6.png" max-width="100%">
+<img src="client/src/pictures/pic6.png" max-width="100%">
 
 ### View Them In Dashboard
-<img src="src/pictures/pic7.png" max-width="100%">
-<img src="src/pictures/pic8.png" max-width="100%">
+<img src="client/src/pictures/pic7.png" max-width="100%">
+<img src="client/src/pictures/pic8.png" max-width="100%">
 
 [Live Web App](https://shielded-citadel-69871.herokuapp.com/)
 
